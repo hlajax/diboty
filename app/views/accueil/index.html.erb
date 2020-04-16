@@ -4,10 +4,33 @@
 		<div class="col-lg-6 offset-lg-3 col-12 m-top-big text-center">
 			<h1 class="text-white text-center text-logo">bienvenue sur diboty</h1>
 			<p class="text-white text-maj text-center">
-				que voulez-vous faire?
+				vous êtes?
 			</p>
-			<%=link_to "Recevoir des kits alimentaires", new_kit_path,class:"btn btn-primary text-maj mb-4" %>
-			<%=link_to "Offrir un don en nature", new_don_path,class:"btn btn-outline-light text-maj" %>
+			<div class="row">
+				<div class="col-lg-6 mt-4">
+								<div class="dropdown">
+  <button class="btn btn-primary btn-lg text-maj dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Bénéficiaire
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <%=link_to "Recevoir des kits alimentaires", new_kit_path,class:"dropdown-item" %>
+              <%=link_to "la gratuité du logement", new_loyer_path,class:"dropdown-item" %>
+  </div>
+</div>
+
+				</div>
+				<div class="col-lg-6 mt-4">
+					<div class="dropdown">
+  <button class="btn btn-outline-light btn-lg text-maj  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Donateur
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <%=link_to "Offrir un don en nature", new_don_path,class:"dropdown-item" %>
+              <%=link_to "Offrir un don en numéraire", new_don_numeraire_path,class:"dropdown-item" %>
+  </div>
+</div>
+				</div>
+			</div>
   		</div>
   	</div>
 </div>
