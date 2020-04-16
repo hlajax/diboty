@@ -28,7 +28,7 @@ class KitsController < ApplicationController
 
     respond_to do |format|
       if @kit.save
-        format.html { redirect_to @kit, notice: 'Kit was successfully created.' }
+        format.html { redirect_to @kit, notice: 'Demande envoyée !' }
         format.json { render :show, status: :created, location: @kit }
       else
         format.html { render :new }

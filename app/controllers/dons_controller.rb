@@ -28,7 +28,7 @@ class DonsController < ApplicationController
 
     respond_to do |format|
       if @don.save
-        format.html { redirect_to @don, notice: 'Don was successfully created.' }
+        format.html { redirect_to @don, notice: 'Merci Pour votre Don !' }
         format.json { render :show, status: :created, location: @don }
       else
         format.html { render :new }
