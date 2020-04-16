@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Loyerentreprises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom proprietaire</th>
+      <th>Date de naissance proprietaire</th>
+      <th>Lieu de naissance proprietaire</th>
+      <th>Telephones proprietaire</th>
+      <th>Email proprietaire</th>
+      <th>Lieu de residence proprietaire</th>
+      <th>Raison sociale</th>
+      <th>Secteur</th>
+      <th>Fiche</th>
+      <th>Rccm</th>
+      <th>Nif</th>
+      <th>Telephones</th>
+      <th>Email</th>
+      <th>Cnamgs</th>
+      <th>Cnss</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @loyerentreprises.each do |loyerentreprise| %>
+      <tr>
+        <td><%= loyerentreprise.nom_proprietaire %></td>
+        <td><%= loyerentreprise.date_de_naissance_proprietaire %></td>
+        <td><%= loyerentreprise.lieu_de_naissance_proprietaire %></td>
+        <td><%= loyerentreprise.telephones_proprietaire %></td>
+        <td><%= loyerentreprise.email_proprietaire %></td>
+        <td><%= loyerentreprise.lieu_de_residence_proprietaire %></td>
+        <td><%= loyerentreprise.raison_sociale %></td>
+        <td><%= loyerentreprise.secteur %></td>
+        <td><%= loyerentreprise.fiche %></td>
+        <td><%= loyerentreprise.rccm %></td>
+        <td><%= loyerentreprise.nif %></td>
+        <td><%= loyerentreprise.telephones %></td>
+        <td><%= loyerentreprise.email %></td>
+        <td><%= loyerentreprise.cnamgs %></td>
+        <td><%= loyerentreprise.cnss %></td>
+        <td><%= link_to 'Show', loyerentreprise %></td>
+        <td><%= link_to 'Edit', edit_loyerentreprise_path(loyerentreprise) %></td>
+        <td><%= link_to 'Destroy', loyerentreprise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Loyerentreprise', new_loyerentreprise_path %>

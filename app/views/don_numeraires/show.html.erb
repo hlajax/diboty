@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @don_numeraire.nom %>
+</p>
+
+<p>
+  <strong>Nom entreprise:</strong>
+  <%= @don_numeraire.nom_entreprise %>
+</p>
+
+<p>
+  <strong>Numero de telephone:</strong>
+  <%= @don_numeraire.numero_de_telephone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @don_numeraire.email %>
+</p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @don_numeraire.adresse %>
+</p>
+
+<p>
+  <strong>Montant:</strong>
+  <%= @don_numeraire.montant %>
+</p>
+
+<p>
+  <strong>Nature:</strong>
+  <%= @don_numeraire.nature_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @don_numeraire.date %>
+</p>
+
+<%= link_to 'Edit', edit_don_numeraire_path(@don_numeraire) %> |
+<%= link_to 'Back', don_numeraires_path %>

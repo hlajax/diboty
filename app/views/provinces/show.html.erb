@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @province.nom %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @province.description %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @province.slug %>
+</p>
+
+<%= link_to 'Edit', edit_province_path(@province) %> |
+<%= link_to 'Back', provinces_path %>

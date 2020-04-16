@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Loyers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom proprietaire</th>
+      <th>Date de naissance proprietaire</th>
+      <th>Lieu de naissance proprietaire</th>
+      <th>Telephones proprietaire</th>
+      <th>Email proprietaire</th>
+      <th>Lieu de residence proprietaire</th>
+      <th>Nom locataire</th>
+      <th>Nationalite locataire</th>
+      <th>Profession locataire</th>
+      <th>Date de naissance locataire</th>
+      <th>Lieu de naissance locataire</th>
+      <th>Telephones locataire</th>
+      <th>Email locataire</th>
+      <th>Employeur locataire</th>
+      <th>Secteur locataire</th>
+      <th>Cnamgs locataire</th>
+      <th>Cnss locataire</th>
+      <th>Justification locataire</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @loyers.each do |loyer| %>
+      <tr>
+        <td><%= loyer.nom_proprietaire %></td>
+        <td><%= loyer.date_de_naissance_proprietaire %></td>
+        <td><%= loyer.lieu_de_naissance_proprietaire %></td>
+        <td><%= loyer.telephones_proprietaire %></td>
+        <td><%= loyer.email_proprietaire %></td>
+        <td><%= loyer.lieu_de_residence_proprietaire %></td>
+        <td><%= loyer.nom_locataire %></td>
+        <td><%= loyer.nationalite_locataire %></td>
+        <td><%= loyer.profession_locataire %></td>
+        <td><%= loyer.date_de_naissance_locataire %></td>
+        <td><%= loyer.lieu_de_naissance_locataire %></td>
+        <td><%= loyer.telephones_locataire %></td>
+        <td><%= loyer.email_locataire %></td>
+        <td><%= loyer.employeur_locataire %></td>
+        <td><%= loyer.secteur_locataire %></td>
+        <td><%= loyer.cnamgs_locataire %></td>
+        <td><%= loyer.cnss_locataire %></td>
+        <td><%= loyer.justification_locataire %></td>
+        <td><%= link_to 'Show', loyer %></td>
+        <td><%= link_to 'Edit', edit_loyer_path(loyer) %></td>
+        <td><%= link_to 'Destroy', loyer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Loyer', new_loyer_path %>

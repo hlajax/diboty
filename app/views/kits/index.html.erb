@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Commune</th>
+      <th>Arrondissement</th>
+      <th>Quartier</th>
+      <th>Nom</th>
+      <th>Sex</th>
+      <th>Date de naissance</th>
+      <th>Lieu de naissance</th>
+      <th>Statut</th>
+      <th>Niveau etude mere</th>
+      <th>Activite mere</th>
+      <th>Revenu mensuel</th>
+      <th>Habitat</th>
+      <th>Telephones</th>
+      <th>Email</th>
+      <th>Activite professionnelle</th>
+      <th>Cnamgs</th>
+      <th>Cnss</th>
+      <th>Religion</th>
+      <th>Lieu de priere</th>
+      <th>Nombre handicap</th>
+      <th>Nombre agees</th>
+      <th>Nombre mere</th>
+      <th>Nombre jeune</th>
+      <th>Nombre orphelin</th>
+      <th>Numero compteur</th>
+      <th>Numero canal</th>
+      <th>Numero mobile money</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kits.each do |kit| %>
+      <tr>
+        <td><%= kit.commune_id %></td>
+        <td><%= kit.arrondissement_id %></td>
+        <td><%= kit.quartier %></td>
+        <td><%= kit.nom %></td>
+        <td><%= kit.sex_id %></td>
+        <td><%= kit.date_de_naissance %></td>
+        <td><%= kit.lieu_de_naissance %></td>
+        <td><%= kit.statut_id %></td>
+        <td><%= kit.niveau_etude_mere %></td>
+        <td><%= kit.activite_mere %></td>
+        <td><%= kit.revenu_mensuel %></td>
+        <td><%= kit.habitat_id %></td>
+        <td><%= kit.telephones %></td>
+        <td><%= kit.email %></td>
+        <td><%= kit.activite_professionnelle %></td>
+        <td><%= kit.cnamgs %></td>
+        <td><%= kit.cnss %></td>
+        <td><%= kit.religion %></td>
+        <td><%= kit.lieu_de_priere %></td>
+        <td><%= kit.nombre_handicap %></td>
+        <td><%= kit.nombre_agees %></td>
+        <td><%= kit.nombre_mere %></td>
+        <td><%= kit.nombre_jeune %></td>
+        <td><%= kit.nombre_orphelin %></td>
+        <td><%= kit.numero_compteur %></td>
+        <td><%= kit.numero_canal %></td>
+        <td><%= kit.numero_mobile_money %></td>
+        <td><%= link_to 'Show', kit %></td>
+        <td><%= link_to 'Edit', edit_kit_path(kit) %></td>
+        <td><%= link_to 'Destroy', kit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kit', new_kit_path %>

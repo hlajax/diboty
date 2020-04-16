@@ -1,0 +1,32 @@
+<%= form_with(model: nature, local: true) do |form| %>
+  <% if nature.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nature.errors.count, "error") %> prohibited this nature from being saved:</h2>
+
+      <ul>
+      <% nature.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nom %>
+    <%= form.text_field :nom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detail %>
+    <%= form.text_area :detail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,59 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  commune_id: 1
+  arrondissement_id: 1
+  quartier: MyString
+  nom: MyString
+  sex_id: 1
+  date_de_naissance: MyString
+  lieu_de_naissance: MyString
+  statut_id: 1
+  niveau_etude_mere: MyString
+  activite_mere: MyString
+  revenu_mensuel: MyString
+  habitat_id: 1
+  telephones: MyString
+  email: MyString
+  activite_professionnelle: MyString
+  cnamgs: MyString
+  cnss: MyString
+  religion: MyString
+  lieu_de_priere: MyString
+  nombre_handicap: MyString
+  nombre_agees: MyString
+  nombre_mere: MyString
+  nombre_jeune: MyString
+  nombre_orphelin: MyString
+  numero_compteur: MyString
+  numero_canal: MyString
+  numero_mobile_money: MyString
+
+two:
+  commune_id: 1
+  arrondissement_id: 1
+  quartier: MyString
+  nom: MyString
+  sex_id: 1
+  date_de_naissance: MyString
+  lieu_de_naissance: MyString
+  statut_id: 1
+  niveau_etude_mere: MyString
+  activite_mere: MyString
+  revenu_mensuel: MyString
+  habitat_id: 1
+  telephones: MyString
+  email: MyString
+  activite_professionnelle: MyString
+  cnamgs: MyString
+  cnss: MyString
+  religion: MyString
+  lieu_de_priere: MyString
+  nombre_handicap: MyString
+  nombre_agees: MyString
+  nombre_mere: MyString
+  nombre_jeune: MyString
+  nombre_orphelin: MyString
+  numero_compteur: MyString
+  numero_canal: MyString
+  numero_mobile_money: MyString

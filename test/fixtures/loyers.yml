@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom_proprietaire: MyString
+  date_de_naissance_proprietaire: MyString
+  lieu_de_naissance_proprietaire: MyString
+  telephones_proprietaire: MyString
+  email_proprietaire: MyString
+  lieu_de_residence_proprietaire: MyString
+  nom_locataire: MyString
+  nationalite_locataire: MyString
+  profession_locataire: MyString
+  date_de_naissance_locataire: MyString
+  lieu_de_naissance_locataire: MyString
+  telephones_locataire: MyString
+  email_locataire: MyString
+  employeur_locataire: MyString
+  secteur_locataire: MyString
+  cnamgs_locataire: MyString
+  cnss_locataire: MyString
+  justification_locataire: MyString
+
+two:
+  nom_proprietaire: MyString
+  date_de_naissance_proprietaire: MyString
+  lieu_de_naissance_proprietaire: MyString
+  telephones_proprietaire: MyString
+  email_proprietaire: MyString
+  lieu_de_residence_proprietaire: MyString
+  nom_locataire: MyString
+  nationalite_locataire: MyString
+  profession_locataire: MyString
+  date_de_naissance_locataire: MyString
+  lieu_de_naissance_locataire: MyString
+  telephones_locataire: MyString
+  email_locataire: MyString
+  employeur_locataire: MyString
+  secteur_locataire: MyString
+  cnamgs_locataire: MyString
+  cnss_locataire: MyString
+  justification_locataire: MyString

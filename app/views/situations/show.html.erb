@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @situation.nom %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @situation.description %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @situation.slug %>
+</p>
+
+<%= link_to 'Edit', edit_situation_path(@situation) %> |
+<%= link_to 'Back', situations_path %>

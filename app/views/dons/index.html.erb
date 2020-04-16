@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Nom entreprise</th>
+      <th>Numero de telephone</th>
+      <th>Email</th>
+      <th>Adresse</th>
+      <th>Detail</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dons.each do |don| %>
+      <tr>
+        <td><%= don.nom %></td>
+        <td><%= don.nom_entreprise %></td>
+        <td><%= don.numero_de_telephone %></td>
+        <td><%= don.email %></td>
+        <td><%= don.adresse %></td>
+        <td><%= don.detail %></td>
+        <td><%= don.date %></td>
+        <td><%= link_to 'Show', don %></td>
+        <td><%= link_to 'Edit', edit_don_path(don) %></td>
+        <td><%= link_to 'Destroy', don, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Don', new_don_path %>

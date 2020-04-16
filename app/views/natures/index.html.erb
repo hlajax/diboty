@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Natures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Detail</th>
+      <th>Slug</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @natures.each do |nature| %>
+      <tr>
+        <td><%= nature.nom %></td>
+        <td><%= nature.detail %></td>
+        <td><%= nature.slug %></td>
+        <td><%= link_to 'Show', nature %></td>
+        <td><%= link_to 'Edit', edit_nature_path(nature) %></td>
+        <td><%= link_to 'Destroy', nature, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nature', new_nature_path %>

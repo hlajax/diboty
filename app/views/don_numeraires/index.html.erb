@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Don Numeraires</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Nom entreprise</th>
+      <th>Numero de telephone</th>
+      <th>Email</th>
+      <th>Adresse</th>
+      <th>Montant</th>
+      <th>Nature</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @don_numeraires.each do |don_numeraire| %>
+      <tr>
+        <td><%= don_numeraire.nom %></td>
+        <td><%= don_numeraire.nom_entreprise %></td>
+        <td><%= don_numeraire.numero_de_telephone %></td>
+        <td><%= don_numeraire.email %></td>
+        <td><%= don_numeraire.adresse %></td>
+        <td><%= don_numeraire.montant %></td>
+        <td><%= don_numeraire.nature_id %></td>
+        <td><%= don_numeraire.date %></td>
+        <td><%= link_to 'Show', don_numeraire %></td>
+        <td><%= link_to 'Edit', edit_don_numeraire_path(don_numeraire) %></td>
+        <td><%= link_to 'Destroy', don_numeraire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Don Numeraire', new_don_numeraire_path %>

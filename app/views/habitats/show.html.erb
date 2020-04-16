@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @habitat.nom %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @habitat.description %>
+</p>
+
+<%= link_to 'Edit', edit_habitat_path(@habitat) %> |
+<%= link_to 'Back', habitats_path %>

@@ -1,0 +1,2 @@
+json.extract! kit, :id, :commune_id, :arrondissement_id, :quartier, :nom, :sex_id, :date_de_naissance, :lieu_de_naissance, :statut_id, :niveau_etude_mere, :activite_mere, :revenu_mensuel, :habitat_id, :telephones, :email, :activite_professionnelle, :cnamgs, :cnss, :religion, :lieu_de_priere, :nombre_handicap, :nombre_agees, :nombre_mere, :nombre_jeune, :nombre_orphelin, :numero_compteur, :numero_canal, :numero_mobile_money, :created_at, :updated_at
+json.url kit_url(kit, format: :json)

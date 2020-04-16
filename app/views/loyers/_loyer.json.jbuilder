@@ -1,0 +1,2 @@
+json.extract! loyer, :id, :nom_proprietaire, :date_de_naissance_proprietaire, :lieu_de_naissance_proprietaire, :telephones_proprietaire, :email_proprietaire, :lieu_de_residence_proprietaire, :nom_locataire, :nationalite_locataire, :profession_locataire, :date_de_naissance_locataire, :lieu_de_naissance_locataire, :telephones_locataire, :email_locataire, :employeur_locataire, :secteur_locataire, :cnamgs_locataire, :cnss_locataire, :justification_locataire, :created_at, :updated_at
+json.url loyer_url(loyer, format: :json)

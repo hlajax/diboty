@@ -1,0 +1,202 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-12 p-4">
+<%= form_with(model: loyer, local: true) do |form| %>
+  <% if loyer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(loyer.errors.count, "error") %> prohibited this loyer from being saved:</h2>
+
+      <ul>
+      <% loyer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-lg-3 col-12" style="padding:1%;">
+      <div style="background-color:white;width:100%;padding:3%;border-radius:5px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+      <div class="row">
+          <div class="col-lg-12 col-12">
+      <h5 class="text-titre">Informations du Propriétaire</h5>
+    </div>
+  <div class="form-group col-lg-12 col-12">
+    <%= form.label :nom_proprietaire %>
+    <%= form.text_field :nom_et_prenom,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :date_de_naissance %>
+    <%= form.date_field :date_de_naissance_proprietaire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :lieu_de_naissance %>
+    <%= form.text_field :lieu_de_naissance,class:"form-control" %>
+  </div>
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :type_de_pièce %>
+    <%= form.collection_select :piece_id, Piece.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+  </div>
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :numéro_de_pièce %>
+    <%= form.text_field :numero_piece,class:"form-control" %>
+  </div>
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :telephones %>
+    <%= form.telephone_field :telephones_proprietaire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :email %>
+    <%= form.email_field :email_proprietaire,class:"form-control" %>
+  </div>
+   <div class="form-group col-lg-12 col-12">
+    <%= form.label :situation_professionnelle %>
+    <%= form.collection_select :situation_id, Situation.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+  </div>
+  <div class="form-group col-lg-12 col-12">
+    <%= form.label :lieu_de_résidence %>
+    <%= form.text_field :lieu_de_residence_proprietaire,class:"form-control" %>
+  </div>
+  </div>
+  </div>
+</div>
+  <div class="col-lg-6 col-12" style="padding:1%;">
+    <div style="background-color:white;width:100%;padding:2%;border-radius:5px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+      <div class="row">
+    <div class="col-lg-12 col-12">
+      <h5 class="text-titre">Informations du Locataire</h5>
+    </div>
+  <div class="form-group col-lg-9 col-12">
+    <%= form.label :nom_et_prenom %>
+    <%= form.text_field :nom_locataire,class:"form-control" %>
+  </div>
+    <div class="form-group col-lg-3 col-12">
+    <%= form.label :pièce %>
+    <%= form.collection_select :sex_id, Sex.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+  </div>
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :nationalité %>
+    <%= form.text_field :nationalite_locataire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-5 col-12">
+    <%= form.label :profession %>
+    <%= form.text_field :profession_locataire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-3 col-12">
+    <%= form.label :date_de_naissance %>
+    <%= form.date_field :date_de_naissance_locataire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :lieu_de_naissance %>
+    <%= form.text_field :lieu_de_naissance_locataire,class:"form-control" %>
+  </div>
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :type_de_pièce %>
+    <%= form.collection_select :piece_locataire_id, PieceLocataire.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+  </div>
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :numéro_de_pièce %>
+    <%= form.text_field :numero_piece_locataire,class:"form-control" %>
+  </div>
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :telephones %>
+    <%= form.telephone_field :telephones_locataire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :email %>
+    <%= form.email_field :email_locataire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :employeur%>
+    <%= form.text_field :employeur_locataire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :secteur %>
+    <%= form.text_field :secteur_locataire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :numéro_cnamgs %>
+    <%= form.text_field :cnamgs_locataire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :numéro_cnss %>
+    <%= form.text_field :cnss_locataire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <%= form.label :justificatifs_de_perte_de_revenus %>
+    <%= form.text_field :justification_locataire,class:"form-control" %>
+  </div>
+  </div>
+  </div>
+</div>
+  <div class="col-lg-3 col-12" style="padding:1%;">
+    <div style="background-color:white;width:100%;padding:3%;border-radius:5px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+      <div class="row">
+          <div class="col-lg-12 col-12">
+      <h5 class="text-titre">Informations sur le logement</h5>
+    </div>
+      <div class="form-group col-lg-6 col-12">
+    <%= form.label :Type_de_logement %>
+    <%= form.collection_select :type_id, Type.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+  </div>
+    <div class="form-group col-lg-6 col-12">
+    <%= form.label :construit_en %>
+    <%= form.collection_select :construction_id, Construction.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+  </div>
+    <div class="form-group col-lg-12 col-12">
+    <%= form.label :Province %>
+    <%= form.collection_select :province_id, Province.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+  </div>
+    <div class="form-group col-lg-6 col-12">
+    <%= form.label :Ville %>
+    <%= form.collection_select :ville_id, Ville.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+  </div>
+    <div class="form-group col-lg-6 col-12">
+    <%= form.label :Arrondissement %>
+    <%= form.collection_select :arrondissement_id, Arrondissement.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+  </div>
+    <div class="form-group col-lg-6 col-12">
+    <%= form.label :loyer_mensuel %>
+    <%= form.text_field :loyer_mensuel,class:"form-control" %>
+  </div>
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :loyer_trimestriel %>
+    <%= form.text_field :loyer_trimestriel,class:"form-control" %>
+  </div>
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :adresse %>
+    <%= form.text_field :adresse,class:"form-control" %>
+  </div>
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :quartier %>
+    <%= form.text_field :quartier,class:"form-control" %>
+  </div>
+  <div class="form-group col-lg-12 col-12">
+    <%= form.label :autre %>
+    <%= form.text_field :autre,class:"form-control" %>
+  </div>
+</div>
+
+<div class="actions">
+    <%= form.submit "Envoyer la demande", class:"btn btn-success btn-block" %>
+  </div>
+
+</div>
+  </div>
+  
+<% end %>
+</div>
+    </div>
+  </div>
+  </div>

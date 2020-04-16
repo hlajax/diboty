@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @piece_locataire.nom %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @piece_locataire.description %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @piece_locataire.slug %>
+</p>
+
+<%= link_to 'Edit', edit_piece_locataire_path(@piece_locataire) %> |
+<%= link_to 'Back', piece_locataires_path %>
