@@ -1,13 +1,13 @@
 <div class="container-fluid intro" id="intro">
 	<div class="row intro-overlay">
-		<%=render "menus/main" %>
+		
 		<div class="col-lg-6 offset-lg-3 col-12 m-top-big text-center">
 			<h1 class="text-white text-center text-logo">bienvenue sur diboty</h1>
 			<p class="text-white text-maj text-center">
 				vous êtes?
 			</p>
 			<div class="row">
-				<div class="col-lg-6 mt-4">
+				<div class="col-lg-4 mt-4">
 								<div class="dropdown">
   <button class="btn btn-primary btn-lg text-maj dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Bénéficiaire
@@ -19,7 +19,7 @@
 </div>
 
 				</div>
-				<div class="col-lg-6 mt-4">
+				<div class="col-lg-4 mt-4">
 					<div class="dropdown">
   <button class="btn btn-outline-light btn-lg text-maj  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Donateur
@@ -27,6 +27,21 @@
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <%=link_to "Offrir un don en nature", new_don_path,class:"dropdown-item" %>
               <%=link_to "Offrir un don en numéraire", new_don_numeraire_path,class:"dropdown-item" %>
+  </div>
+</div>
+				</div>
+				<div class="col-lg-4 mt-4">
+					<div class="dropdown">
+  <button class="btn btn-danger btn-lg text-maj  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Infos utiles
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">connaître les mesures d'accompagnent</a>
+              <a class="dropdown-item" href="#">signalez des abus des forces de sécurité et de défenses</a>
+              <a class="dropdown-item" href="#">signalez des personnes qui violent les msures de confinement</a>
+              <a class="dropdown-item" href="#">
+              problème d'eau et d'éléctricité dans votre zone
+              </a>
   </div>
 </div>
 				</div>

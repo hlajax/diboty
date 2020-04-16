@@ -69,6 +69,6 @@ class DonNumerairesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def don_numeraire_params
-      params.require(:don_numeraire).permit(:nom, :nom_entreprise, :numero_de_telephone, :email, :adresse, :montant, :nature_id, :date)
+      params.require(:don_numeraire).permit(:nom, :nom_entreprise, :numero_de_telephone, :email, :adresse, :montant, :nature_id)
     end
 end

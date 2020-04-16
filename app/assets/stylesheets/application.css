@@ -79,6 +79,9 @@ label{
 .m-top-big{
 	margin-top: 15%;
 }
+.m-bottom{
+	margin-bottom: 15%;
+}
 .text-titre{
 	text-transform: uppercase;
 	font-weight: bold;
@@ -93,6 +96,16 @@ label{
 	font-weight: bold;
 	font-size: 30px;
 	text-transform: uppercase;
+}
+.text-logo a{
+	font-weight: bold;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: white;
+}
+.text-logo a:hover{
+	background-color:transparent;
+	text-decoration: none;
 }
 .nav-link{
 	color: white;

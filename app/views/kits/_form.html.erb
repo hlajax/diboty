@@ -23,67 +23,67 @@
     </div>
   <div class="form-group col-lg-4 col-12">
     <%= form.label :commune %>
-    <%= form.text_field :commune,class:"form-control" %>
+    <%= form.text_field :commune,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :arrondissement %>
-    <%= form.text_field :arrondissement,class:"form-control" %>
+    <%= form.text_field :arrondissement,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :quartier %>
-    <%= form.text_field :quartier,class:"form-control" %>
+    <%= form.text_field :quartier,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-8 col-12">
     <%= form.label :nom %>
-    <%= form.text_field :nom,class:"form-control" %>
+    <%= form.text_field :nom,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :sexe %>
-    <%= form.collection_select :sex_id, Sex.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+    <%= form.collection_select :sex_id, Sex.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :date_de_naissance %>
-    <%= form.date_field :date_de_naissance,class:"form-control" %>
+    <%= form.date_field :date_de_naissance,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :lieu_de_naissance %>
-    <%= form.text_field :lieu_de_naissance,class:"form-control" %>
+    <%= form.text_field :lieu_de_naissance,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :statut_matrimonial %>
-    <%= form.collection_select :statut_id, Statut.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+    <%= form.collection_select :statut_id, Statut.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :niveau_etude_mere %>
-    <%= form.text_field :niveau_etude_mere,class:"form-control" %>
+    <%= form.text_field :niveau_etude_mere,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :activite_mere %>
-    <%= form.text_field :activite_mere,class:"form-control" %>
+    <%= form.text_field :activite_mere,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :revenu_mensuel %>
-    <%= form.text_field :revenu_mensuel,class:"form-control" %>
+    <%= form.text_field :revenu_mensuel,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :statut_habitat %>
-    <%= form.collection_select :habitat_id, Habitat.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control" %>
+    <%= form.collection_select :habitat_id, Habitat.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :montant_loyer %>
-    <%= form.text_field :loyer,class:"form-control" %>
+    <%= form.text_field :loyer,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
@@ -93,32 +93,32 @@
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :email %>
-    <%= form.email_field :email,class:"form-control" %>
+    <%= form.email_field :email,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :activite_professionnelle %>
-    <%= form.text_field :activite_professionnelle,class:"form-control" %>
+    <%= form.text_field :activite_professionnelle,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :cnamgs %>
-    <%= form.text_field :cnamgs,class:"form-control" %>
+    <%= form.text_field :cnamgs,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :cnss %>
-    <%= form.text_field :cnss,class:"form-control" %>
+    <%= form.text_field :cnss,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :religion %>
-    <%= form.text_field :religion,class:"form-control" %>
+    <%= form.text_field :religion,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <%= form.label :lieu_de_priere %>
-    <%= form.text_field :lieu_de_priere,class:"form-control" %>
+    <%= form.text_field :lieu_de_priere,class:"form-control", required: :true  %>
   </div>
   </div>
   </div>
@@ -131,42 +131,42 @@
     </div>
   <div class="form-group col-lg-6 col-12">
     <%= form.label :nombre_handicap %>
-    <%= form.text_field :nombre_handicap,class:"form-control" %>
+    <%= form.text_field :nombre_handicap,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
     <%= form.label :nombre_agees %>
-    <%= form.text_field :nombre_agees,class:"form-control" %>
+    <%= form.text_field :nombre_agees,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
     <%= form.label :nombre_mere %>
-    <%= form.text_field :nombre_mere,class:"form-control" %>
+    <%= form.text_field :nombre_mere,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
     <%= form.label :nombre_jeune %>
-    <%= form.text_field :nombre_jeune,class:"form-control" %>
+    <%= form.text_field :nombre_jeune,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
     <%= form.label :nombre_orphelin %>
-    <%= form.text_field :nombre_orphelin,class:"form-control" %>
+    <%= form.text_field :nombre_orphelin,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
     <%= form.label :numero_compteur %>
-    <%= form.text_field :numero_compteur,class:"form-control" %>
+    <%= form.text_field :numero_compteur,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
     <%= form.label :numero_canal %>
-    <%= form.text_field :numero_canal,class:"form-control" %>
+    <%= form.text_field :numero_canal,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
     <%= form.label :numero_mobile_money %>
-    <%= form.text_field :numero_mobile_money,class:"form-control" %>
+    <%= form.text_field :numero_mobile_money,class:"form-control", required: :true  %>
   </div>
 
   <div class="col-lg-12 col-12">
