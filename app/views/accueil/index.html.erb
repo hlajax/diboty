@@ -1,15 +1,23 @@
-<div class="container-fluid intro" id="intro">
+<div class="container-fluid">
 	<div class="row intro-overlay">
-		
-		<div class="col-lg-6 offset-lg-3 col-12 m-top-big text-center">
-			<h1 class="text-white text-center text-logo">bienvenue sur diboty</h1>
-			<p class="text-white text-maj text-center">
-				vous êtes?
+		<div class="col-lg-6 offset-lg-3 col-12 text-center">
+      <img src="https://res.cloudinary.com/aseed/image/upload/v1587105475/logo_ry2vew.png" alt="logo" class="img-fluid">
+			<h1 class="text-center text-logo m-top-big">bienvenue sur Kits</h1>
+			<p class="text-maj text-center">
+				Choisissez une option
 			</p>
-			<div class="row">
-				<div class="col-lg-4 mt-4">
-								<div class="dropdown">
-  <button class="btn btn-primary btn-lg text-maj dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  		</div>
+  	</div>
+    <div class="row row-cols-1 row-cols-md-4 m-top">
+  <div class="col mb-4">
+    <div class="card bg-dark text-white">
+  <img src="https://res.cloudinary.com/aseed/image/upload/v1587018572/covid-help3_rm0qjm.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title text-maj text-bold">Bénéficiaire</h5>
+    <p class="card-text"><small>This is a wider card with supporting text below as a natural lead-in to additional content.</small>
+    </p>
+    <div class="dropdown">
+  <button class="btn btn-primary btn-sm text-maj dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Bénéficiaire
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -17,11 +25,18 @@
               <%=link_to "la gratuité du logement", new_loyer_path,class:"dropdown-item" %>
   </div>
 </div>
-
-				</div>
-				<div class="col-lg-4 mt-4">
-					<div class="dropdown">
-  <button class="btn btn-outline-light btn-lg text-maj  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  </div>
+</div>
+  </div>
+  <div class="col mb-4">
+    <div class="card bg-dark text-white">
+  <img src="https://res.cloudinary.com/aseed/image/upload/v1587018572/covid-help3_rm0qjm.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title text-maj text-bold">Donateur</h5>
+    <p class="card-text"><small>This is a wider card with supporting text below as a natural lead-in to additional content.</small>
+    </p>
+    <div class="dropdown">
+  <button class="btn btn-outline-light btn-sm text-maj  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Donateur
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -29,10 +44,18 @@
               <%=link_to "Offrir un don en numéraire", new_don_numeraire_path,class:"dropdown-item" %>
   </div>
 </div>
-				</div>
-				<div class="col-lg-4 mt-4">
-					<div class="dropdown">
-  <button class="btn btn-danger btn-lg text-maj  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  </div>
+</div>
+  </div>
+  <div class="col mb-4">
+    <div class="card bg-dark text-white">
+  <img src="https://res.cloudinary.com/aseed/image/upload/v1587018572/covid-help3_rm0qjm.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title text-maj text-bold">Infos utiles</h5>
+    <p class="card-text"><small>This is a wider card with supporting text below as a natural lead-in to additional content.</small>
+    </p>
+    <div class="dropdown">
+  <button class="btn btn-danger btn-sm text-maj  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Infos utiles
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -44,8 +67,19 @@
               </a>
   </div>
 </div>
-				</div>
-			</div>
-  		</div>
-  	</div>
+  </div>
+</div>
+  </div>
+  <div class="col mb-4">
+    <div class="card bg-dark text-white">
+  <img src="https://res.cloudinary.com/aseed/image/upload/v1587018572/covid-help3_rm0qjm.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title text-maj text-bold">Gabonais en détresse</h5>
+    <p class="card-text"><small>This is a wider card with supporting text below as a natural lead-in to additional content.</small>
+    </p>
+    <%=link_to "Vous signaler", new_signalement_path,class:"btn btn-info btn-sm text-maj" %>
+  </div>
+</div>
+  </div>
+</div>
 </div>

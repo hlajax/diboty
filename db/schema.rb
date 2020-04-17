@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_16_084854) do
+ActiveRecord::Schema.define(version: 2020_04_17_062857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,21 @@ ActiveRecord::Schema.define(version: 2020_04_16_084854) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_constructions_on_slug", unique: true
+  end
+
+  create_table "detresses", force: :cascade do |t|
+    t.string "pays"
+    t.string "ville"
+    t.string "nom"
+    t.integer "sexe_id"
+    t.string "passeport"
+    t.string "contact_whatsapp"
+    t.string "date"
+    t.text "raison_du_sejour"
+    t.string "enfants"
+    t.string "pieces_jointes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "don_numeraires", force: :cascade do |t|
@@ -228,6 +243,22 @@ ActiveRecord::Schema.define(version: 2020_04_16_084854) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_sexes_on_slug", unique: true
+  end
+
+  create_table "signalements", force: :cascade do |t|
+    t.string "pays"
+    t.string "ville"
+    t.string "nom"
+    t.integer "sexe_id"
+    t.string "passeport"
+    t.string "contact_whatsapp"
+    t.string "date"
+    t.text "raison_du_sejour"
+    t.string "enfants"
+    t.string "pieces_jointes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "sex_id"
   end
 
   create_table "situations", force: :cascade do |t|

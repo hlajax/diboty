@@ -6,7 +6,8 @@ class DonsController < ApplicationController
   def index
     @dons = Don.all
   end
-
+  def lesdons
+  end
   # GET /dons/1
   # GET /dons/1.json
   def show

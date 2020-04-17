@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Signalements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pays</th>
+      <th>Ville</th>
+      <th>Nom</th>
+      <th>Sexe</th>
+      <th>Passeport</th>
+      <th>Contact whatsapp</th>
+      <th>Date</th>
+      <th>Raison du sejour</th>
+      <th>Enfants</th>
+      <th>Pieces jointes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @signalements.each do |signalement| %>
+      <tr>
+        <td><%= signalement.pays %></td>
+        <td><%= signalement.ville %></td>
+        <td><%= signalement.nom %></td>
+        <td><%= signalement.sexe_id %></td>
+        <td><%= signalement.passeport %></td>
+        <td><%= signalement.contact_whatsapp %></td>
+        <td><%= signalement.date %></td>
+        <td><%= signalement.raison_du_sejour %></td>
+        <td><%= signalement.enfants %></td>
+        <td><%= signalement.pieces_jointes %></td>
+        <td><%= link_to 'Show', signalement %></td>
+        <td><%= link_to 'Edit', edit_signalement_path(signalement) %></td>
+        <td><%= link_to 'Destroy', signalement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Signalement', new_signalement_path %>

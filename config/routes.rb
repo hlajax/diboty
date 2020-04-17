@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :signalements
   resources :habitats
   resources :statuts
   resources :kits
