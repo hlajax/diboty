@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_26_122457) do
+ActiveRecord::Schema.define(version: 2020_04_26_160645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,23 @@ ActiveRecord::Schema.define(version: 2020_04_26_122457) do
     t.datetime "updated_at", null: false
     t.string "nom"
     t.string "telephone"
+    t.integer "nationalite_id"
+    t.integer "sex_id"
+    t.integer "situation_id"
+    t.integer "statut_id"
+    t.integer "ville_id"
+    t.integer "province_id"
+    t.string "nationalite"
+    t.string "commune"
+    t.string "quartier"
+    t.string "date"
+    t.string "lieu"
+    t.string "cnamgs"
+    t.string "cnss"
+    t.string "one"
+    t.string "religion"
+    t.string "lieu_de_priere"
+    t.integer "arrondissement_id"
     t.index ["email"], name: "index_chefs_on_email", unique: true
     t.index ["reset_password_token"], name: "index_chefs_on_reset_password_token", unique: true
   end
