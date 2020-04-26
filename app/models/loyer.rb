@@ -8,4 +8,6 @@ class Loyer < ApplicationRecord
 	belongs_to :piece_locataire
 	belongs_to :situation
 	belongs_to :sex
+	belongs_to :chef
+	belongs_to :distribue
 end

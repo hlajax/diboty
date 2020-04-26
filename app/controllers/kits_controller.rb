@@ -1,6 +1,6 @@
 class KitsController < ApplicationController
   before_action :set_kit, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_chef!, except: [:show]
   # GET /kits
   # GET /kits.json
   def index
@@ -14,7 +14,7 @@ class KitsController < ApplicationController
 
   # GET /kits/new
   def new
-    @kit = Kit.new
+    @kit = current_chef.kits.build
   end
 
   # GET /kits/1/edit
@@ -24,7 +24,7 @@ class KitsController < ApplicationController
   # POST /kits
   # POST /kits.json
   def create
-    @kit = Kit.new(kit_params)
+    @kit = current_chef.kits.build(kit_params)
 
     respond_to do |format|
       if @kit.save
@@ -69,6 +69,6 @@ class KitsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def kit_params
-      params.require(:kit).permit(:commune, :arrondissement, :quartier, :nom, :sex_id, :date_de_naissance, :lieu_de_naissance, :statut_id, :loyer, :niveau_etude_mere, :activite_mere, :revenu_mensuel, :habitat_id, :telephones, :email, :activite_professionnelle, :cnamgs, :cnss, :religion, :lieu_de_priere, :nombre_handicap, :nombre_agees, :nombre_mere, :nombre_jeune, :nombre_orphelin, :numero_compteur, :numero_canal, :numero_mobile_money)
+      params.require(:kit).permit(:commune, :arrondissement, :quartier, :sex_id, :date_de_naissance, :lieu_de_naissance, :statut_id, :loyer, :niveau_etude_mere, :activite_mere, :revenu_mensuel, :habitat_id, :activite_professionnelle, :cnamgs, :cnss, :religion, :lieu_de_priere, :nombre_handicap, :nombre_agees, :nombre_mere, :nombre_jeune, :nombre_orphelin, :numero_compteur, :numero_canal, :numero_mobile_money, :chef_id, :distribue_id)
     end
 end

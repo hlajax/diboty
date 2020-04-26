@@ -1,0 +1,2 @@
+class Distribue < ApplicationRecord
+end

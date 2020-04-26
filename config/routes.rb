@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :distribues
+  devise_for :chefs
   resources :signalements
   resources :habitats
   resources :statuts

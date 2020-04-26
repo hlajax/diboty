@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_17_062857) do
+ActiveRecord::Schema.define(version: 2020_04_26_122457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,20 @@ ActiveRecord::Schema.define(version: 2020_04_17_062857) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_arrondissements_on_slug", unique: true
+  end
+
+  create_table "chefs", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "nom"
+    t.string "telephone"
+    t.index ["email"], name: "index_chefs_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_chefs_on_reset_password_token", unique: true
   end
 
   create_table "constructions", force: :cascade do |t|
@@ -44,6 +58,12 @@ ActiveRecord::Schema.define(version: 2020_04_17_062857) do
     t.text "raison_du_sejour"
     t.string "enfants"
     t.string "pieces_jointes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "distribues", force: :cascade do |t|
+    t.string "titre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -126,6 +146,8 @@ ActiveRecord::Schema.define(version: 2020_04_17_062857) do
     t.string "commune"
     t.string "arrondissement"
     t.string "loyer"
+    t.integer "chef_id"
+    t.integer "distribue_id"
   end
 
   create_table "loyerentreprises", force: :cascade do |t|
@@ -198,6 +220,8 @@ ActiveRecord::Schema.define(version: 2020_04_17_062857) do
     t.string "numero_piece"
     t.string "numero_piece_locataire"
     t.integer "situation_id"
+    t.integer "chef_id"
+    t.integer "distribue_id"
   end
 
   create_table "natures", force: :cascade do |t|

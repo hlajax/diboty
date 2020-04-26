@@ -187,6 +187,10 @@
     <%= form.label :autre %>
     <%= form.text_field :autre,class:"form-control", required: :true %>
   </div>
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :statut_matrimonial %>
+    <%= form.collection_select :distribue_id, Distribue.all, :id, :titre, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+  </div>
 </div>
 
 <div class="actions">

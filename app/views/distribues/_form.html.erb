@@ -1,0 +1,22 @@
+<%= form_with(model: distribue, local: true) do |form| %>
+  <% if distribue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(distribue.errors.count, "error") %> prohibited this distribue from being saved:</h2>
+
+      <ul>
+      <% distribue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titre %>
+    <%= form.text_field :titre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Distribues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @distribues.each do |distribue| %>
+      <tr>
+        <td><%= distribue.titre %></td>
+        <td><%= link_to 'Show', distribue %></td>
+        <td><%= link_to 'Edit', edit_distribue_path(distribue) %></td>
+        <td><%= link_to 'Destroy', distribue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Distribue', new_distribue_path %>

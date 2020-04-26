@@ -1,0 +1,2 @@
+module DistribuesHelper
+end
