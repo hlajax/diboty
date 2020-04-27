@@ -69,6 +69,6 @@ class BanquesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def banque_params
-      params.require(:banque).permit(:statut_id, :situation_id, :actu_id, :nombre_de_personnes, :nombre_handicapes, :nombre_vieux, :nombre_jeune_mere, :nombre_jeune, :nombre_nourisson, :chef_id, :situation_id, :statut_id, :actu)
+      params.require(:banque).permit(:statut_id, :situation_id, :actu_id, :nombre_de_personnes, :nombre_handicapes, :nombre_vieux, :nombre_jeune_mere, :nombre_jeune, :nombre_nourisson, :chef_id, :situation_id, :statut_id,:distribue_id, :actu_id)
     end
 end

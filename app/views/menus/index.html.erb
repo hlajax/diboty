@@ -11,25 +11,25 @@
       <h2 class="text-center titre d-lg-block d-none m-top-big ">Bienvenue sur Kits</h2>
       <div class="row">
             <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "banque alimentaire", new_banque_path, class:"btn btn-kit-yellow btn-block text-maj" %>
+      <%= link_to "banque alimentaire", new_banque_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
     </div>
     <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "prise en charge loyer", new_loyer_path, class:"btn btn-kit-yellow btn-block text-maj"%>
+      <%= link_to "prise en charge loyer", new_loyer_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."}%>
     </div>
     <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "appui aux PME/SOC", new_loyerentreprise_path, class:"btn btn-kit-yellow btn-block text-maj"%>
+      <%= link_to "appui aux PME/SOC", new_loyerentreprise_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."}%>
     </div>
     <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "don en nature", new_don_path, class:"btn btn-kit-yellow btn-block text-maj" %>
+      <%= link_to "don en nature", new_don_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
     </div>
     <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "don en numéraire", new_don_numeraire_path, class:"btn btn-kit-yellow btn-block text-maj" %>
+      <%= link_to "don en numéraire", new_don_numeraire_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
     </div>
             <div class="col-6 m-top text-center d-lg-block d-none">
-      <%= link_to "Créez votre compte", new_chef_registration_path, class:"btn btn-kit-yellow btn-block text-maj" %>
+      <%= link_to "Créez votre compte", new_chef_registration_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
     </div>
     <div class="col-6 m-top text-center d-lg-block d-none">
-      <%= link_to "Accédez au compte", new_chef_session_path, class:"btn btn-kit-yellow  btn-block text-maj" %>
+      <%= link_to "Accédez au compte", new_chef_session_path, class:"btn btn-kit-yellow  btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
     </div>
 
       </div>

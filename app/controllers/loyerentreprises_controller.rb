@@ -14,7 +14,7 @@ class LoyerentreprisesController < ApplicationController
 
   # GET /loyerentreprises/new
   def new
-    @loyerentreprise = Loyerentreprise.new
+    @loyerentreprise = current_chef.loyerentreprises.build
   end
 
   # GET /loyerentreprises/1/edit
@@ -24,11 +24,11 @@ class LoyerentreprisesController < ApplicationController
   # POST /loyerentreprises
   # POST /loyerentreprises.json
   def create
-    @loyerentreprise = Loyerentreprise.new(loyerentreprise_params)
+    @loyerentreprise = current_chef.loyerentreprises.build(loyerentreprise_params)
 
     respond_to do |format|
       if @loyerentreprise.save
-        format.html { redirect_to @loyerentreprise, notice: 'Loyerentreprise was successfully created.' }
+        format.html { redirect_to @loyerentreprise, notice: 'Demande envoyée !' }
         format.json { render :show, status: :created, location: @loyerentreprise }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class LoyerentreprisesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def loyerentreprise_params
-      params.require(:loyerentreprise).permit(:nom_proprietaire, :date_de_naissance_proprietaire, :lieu_de_naissance_proprietaire,:piece_id, :numero_piece, :telephones_proprietaire, :email_proprietaire, :situation_id, :lieu_de_residence_proprietaire, :raison_sociale, :secteur, :fiche, :rccm, :nif, :telephones, :email, :cnamgs, :cnss, :type_id, :construction_id, :province_id, :ville_id, :arrondissement_id, :loyer_mensuel, :loyer_trimestriel, :adresse, :quartier, :autre, :chef_id)
+      params.require(:loyerentreprise).permit(:nom_proprietaire, :date_de_naissance_proprietaire, :lieu_de_naissance_proprietaire,:piece_id, :numero_piece, :telephones_proprietaire, :email_proprietaire, :situation_id, :lieu_de_residence_proprietaire, :raison_sociale, :secteur, :fiche, :rccm, :nif, :telephones, :email, :cnamgs, :cnss, :type_id, :construction_id, :province_id, :ville_id, :arrondissement_id, :loyer_mensuel, :loyer_trimestriel, :adresse, :quartier, :autre, :chef_id,:distribue_id, :actu_id)
     end
 end
