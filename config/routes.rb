@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :actus
-  get 'menus/index'
+  resources :menus
   resources :banques
   resources :distribues
   devise_for :chefs
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :natures
   resources :don_numeraires
   resources :dons
-  get 'accueil/index'
+  resources :accueil
   resources :loyerentreprises
   resources :piece_locataires
   resources :loyers
@@ -23,9 +23,12 @@ Rails.application.routes.draw do
   resources :sexes
   resources :villes
   resources :provinces
+    authenticated :chef do
+    root 'menus#index', as: :authenticated_root
+  end
     devise_scope :chef do
     get '/chefs/sign_out' => 'devise/sessions#destroy'
   end
-  root "menus#index"
+  root "accueil#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
