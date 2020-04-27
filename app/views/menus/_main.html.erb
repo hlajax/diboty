@@ -3,11 +3,20 @@
     <div class="col-lg-6 col-3">
       <a href="/"><img src="https://res.cloudinary.com/aseed/image/upload/v1587919681/logo_final_kits_odrfgb.png" class="logo"></a>
     </div>
-    <div class="col-lg-6 col-6 text-center">
+    <div class="col-lg-6 col-5 text-center">
       <a href="/"><img src="https://cdn.iconscout.com/icon/free/png-256/profile-417-1163876.png" class="logo"></a>
     </div>
-        <div class="col-lg-6 col-3 text-center">
-          <small><%=current_chef.nom%></small>
+        <div class="col-lg-6 col-4 text-center">
+          <div class="dropdown dropleft">
+  <a class="btn btn-kit-red dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <small><%=current_chef.nom%></small>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <%=link_to "Déconnexion", destroy_chef_session_path, class:"dropdown-item" %>
+  </div>
+</div>
+          
 
     </div>
   </div>

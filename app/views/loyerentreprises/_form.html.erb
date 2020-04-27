@@ -1,3 +1,7 @@
+<div class="container-fluid">
+  <div class="row">
+    <%=render "menus/main" %>
+    <div class="col-lg-6 offset-lg-1 col-12 p-4">
 <%= form_with(model: loyerentreprise, local: true) do |form| %>
   <% if loyerentreprise.errors.any? %>
     <div id="error_explanation">
@@ -12,137 +16,124 @@
   <% end %>
 <fieldset>
     <legend>Infos Propriétaire:</legend>
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :nom_proprietaire %>
-    <%= form.text_field :nom_proprietaire %>
+    <%= form.text_field :nom_proprietaire,class:"form-control", required: :true %>
   </div>
 
-  <div class="field">
-    <%= form.label :date_de_naissance_proprietaire %>
-    <%= form.date_field :date_de_naissance_proprietaire %>
-  </div>
 
-  <div class="field">
-    <%= form.label :lieu_de_naissance_proprietaire %>
-    <%= form.text_field :lieu_de_naissance_proprietaire %>
-  </div>
-    <div class="field">
-    <%= form.label :piece %>
-    <%= form.collection_select :piece_id, Piece.all, :id, :nom, {prompt:"Choisir la province"} %>
-  </div>
-  <div class="field">
-    <%= form.label :numéro_de_pièce %>
-    <%= form.text_field :numero_piece %>
-  </div>
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :telephones_proprietaire %>
-    <%= form.telephone_field :telephones_proprietaire %>
+    <%= form.telephone_field :telephones_proprietaire,class:"form-control", required: :true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :email_proprietaire %>
-    <%= form.email_field :email_proprietaire %>
+    <%= form.email_field :email_proprietaire,class:"form-control", required: :true %>
   </div>
-  <div class="field">
-    <%= form.label :situation_professionnelle %>
-    <%= form.collection_select :situation_id, Situation.all, :id, :nom, {prompt:"Choisir la situation"} %>
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :statut_propriétaire %>
+    <%= form.collection_select :situation_id, Situation.all, :id, :nom, {prompt:"Choisir la situation"},class:"select-css form-control", required: :true %>
   </div>
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :lieu_de_residence_proprietaire %>
-    <%= form.text_field :lieu_de_residence_proprietaire %>
+    <%= form.text_field :lieu_de_residence_proprietaire,class:"form-control", required: :true %>
   </div>
 </fieldset>
 <fieldset>
-    <legend>Infos dlocataire(personne morale):</legend>
-  <div class="field">
+    <legend>Infos du locataire(personne morale):</legend>
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :raison_sociale %>
-    <%= form.text_field :raison_sociale %>
+    <%= form.text_field :raison_sociale,class:"form-control", required: :true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :secteur %>
-    <%= form.text_field :secteur %>
+    <%= form.text_field :secteur,class:"form-control", required: :true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :fiche %>
-    <%= form.text_field :fiche %>
+    <%= form.text_field :fiche,class:"form-control", required: :true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :rccm %>
-    <%= form.text_field :rccm %>
+    <%= form.text_field :rccm,class:"form-control", required: :true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :nif %>
-    <%= form.text_field :nif %>
+    <%= form.text_field :nif,class:"form-control", required: :true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :telephones %>
-    <%= form.text_field :telephones %>
+    <%= form.text_field :telephones,class:"form-control", required: :true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email,class:"form-control", required: :true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :cnamgs %>
-    <%= form.text_field :cnamgs %>
+    <%= form.text_field :cnamgs,class:"form-control", required: :true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :cnss %>
-    <%= form.text_field :cnss %>
+    <%= form.text_field :cnss,class:"form-control", required: :true %>
   </div>
 </fieldset>
     <fieldset>
     <legend>Informations logement:</legend>
-      <div class="field">
+      <div class="form-group col-lg-4 col-12">
     <%= form.label :Type_de_logement %>
-    <%= form.collection_select :type_id, Type.all, :id, :nom, {prompt:"Choisir la province"} %>
+    <%= form.collection_select :type_id, Type.all, :id, :nom, {prompt:"Choisir la province"},class:"select-css form-control", required: :true %>
   </div>
-    <div class="field">
+    <div class="form-group col-lg-4 col-12">
     <%= form.label :Type_de_construction %>
-    <%= form.collection_select :construction_id, Construction.all, :id, :nom, {prompt:"Choisir la province"} %>
+    <%= form.collection_select :construction_id, Construction.all, :id, :nom, {prompt:"Choisir la province"},class:"select-css form-control", required: :true %>
   </div>
-    <div class="field">
+    <div class="form-group col-lg-4 col-12">
     <%= form.label :Province %>
-    <%= form.collection_select :province_id, Province.all, :id, :nom, {prompt:"Choisir la province"} %>
+    <%= form.collection_select :province_id, Province.all, :id, :nom, {prompt:"Choisir la province"},class:"select-css form-control", required: :true %>
   </div>
-    <div class="field">
+    <div class="form-group col-lg-4 col-12">
     <%= form.label :Ville %>
-    <%= form.collection_select :ville_id, Ville.all, :id, :nom, {prompt:"Choisir la province"} %>
+    <%= form.collection_select :ville_id, Ville.all, :id, :nom, {prompt:"Choisir la province"},class:"select-css form-control", required: :true %>
   </div>
-    <div class="field">
+    <div class="form-group col-lg-4 col-12">
     <%= form.label :Arrondissement %>
-    <%= form.collection_select :arrondissement_id, Arrondissement.all, :id, :nom, {prompt:"Choisir la province"} %>
+    <%= form.collection_select :arrondissement_id, Arrondissement.all, :id, :nom, {prompt:"Choisir la province"},class:"select-css form-control", required: :true%>
   </div>
-    <div class="field">
+    <div class="form-group col-lg-4 col-12">
     <%= form.label :loyer_mensuel %>
-    <%= form.text_field :loyer_mensuel %>
+    <%= form.text_field :loyer_mensuel,class:"form-control", required: :true %>
   </div>
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :loyer_trimestriel %>
-    <%= form.text_field :loyer_trimestriel %>
+    <%= form.text_field :loyer_trimestriel,class:"form-control", required: :true %>
   </div>
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :adresse %>
-    <%= form.text_field :adresse %>
+    <%= form.text_field :adresse,class:"form-control", required: :true %>
   </div>
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :quartier %>
-    <%= form.text_field :quartier %>
+    <%= form.text_field :quartier,class:"form-control", required: :true %>
   </div>
-  <div class="field">
+  <div class="form-group col-lg-4 col-12">
     <%= form.label :autre %>
-    <%= form.text_field :autre %>
+    <%= form.text_field :autre,class:"form-control", required: :true %>
   </div>
   </fieldset>
-  <div class="actions">
-    <%= form.submit %>
+  <div class="col-lg-4 col-12">
+    <%= form.button 'Valider'.html_safe, type: :submit, class:"btn btn-kit-yellow btn-block", required: :true, :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Validation..."} %>
   </div>
 <% end %>
+</div>
+</div>
+</div>

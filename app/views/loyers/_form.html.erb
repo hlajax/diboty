@@ -101,7 +101,7 @@
 </div>
 
 <div class="actions">
-    <%= form.submit "Envoyer la demande", class:"btn btn-success btn-block" %>
+    <%= form.button 'Valider'.html_safe, type: :submit, class:"btn btn-kit-yellow btn-block", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Validation..."} %>
   </div>
 
 </div>

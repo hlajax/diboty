@@ -61,7 +61,7 @@
   </div>
 
   <div class="col-lg-4 col-12">
-    <%= form.submit "Valider", class:"btn btn-kit-red", required: :true %>
+    <%= f.button 'Valider'.html_safe, type: :submit, class:"btn btn-kit-yellow btn-block", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Validation..."} %>
   </div>
 <% end %>
 </div>
