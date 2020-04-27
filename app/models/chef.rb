@@ -7,7 +7,7 @@ class Chef < ApplicationRecord
          has_many :loyers
          has_many :banques
          has_many :dons
-         has_many :donnumeraires
+         has_many :don_numeraires
          has_many :signalements
          has_many :loyerentreprises
          belongs_to :sex

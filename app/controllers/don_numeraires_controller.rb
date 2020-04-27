@@ -14,7 +14,7 @@ class DonNumerairesController < ApplicationController
 
   # GET /don_numeraires/new
   def new
-    @don_numeraire = current_chef.donnumeraires.build
+    @don_numeraire = current_chef.don_numeraires.build
   end
 
   # GET /don_numeraires/1/edit
@@ -24,7 +24,7 @@ class DonNumerairesController < ApplicationController
   # POST /don_numeraires
   # POST /don_numeraires.json
   def create
-    @don_numeraire = current_chef.donnumeraires.build(don_numeraire_params)
+    @don_numeraire = current_chef.don_numeraires.build(don_numeraire_params)
 
     respond_to do |format|
       if @don_numeraire.save
