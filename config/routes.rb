@@ -23,12 +23,9 @@ Rails.application.routes.draw do
   resources :sexes
   resources :villes
   resources :provinces
-    authenticated :chef do
-    root 'menus#index', as: :authenticated_root
-  end
     devise_scope :chef do
     get '/chefs/sign_out' => 'devise/sessions#destroy'
   end
-  root "accueil#index"
+  root "menus#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
