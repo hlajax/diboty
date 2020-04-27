@@ -14,7 +14,7 @@ class SignalementsController < ApplicationController
 
   # GET /signalements/new
   def new
-    @signalement = Signalement.new
+    @signalement = current_chef.signalements.build
   end
 
   # GET /signalements/1/edit
@@ -24,7 +24,7 @@ class SignalementsController < ApplicationController
   # POST /signalements
   # POST /signalements.json
   def create
-    @signalement = Signalement.new(signalement_params)
+    @signalement = current_chef.signalements.build(signalement_params)
 
     respond_to do |format|
       if @signalement.save
@@ -69,6 +69,6 @@ class SignalementsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def signalement_params
-      params.require(:signalement).permit(:pays, :ville, :nom, :sex_id, :passeport, :contact_whatsapp, :date, :raison_du_sejour, :enfants, :pieces_jointes)
+      params.require(:signalement).permit(:pays, :ville, :nom, :sex_id, :passeport, :contact_whatsapp, :date, :raison_du_sejour, :enfants, :pieces_jointes, :chef_id)
     end
 end

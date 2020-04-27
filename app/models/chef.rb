@@ -5,6 +5,11 @@ class Chef < ApplicationRecord
          :recoverable, :rememberable, :validatable
          has_many :kits
          has_many :loyers
+         has_many :banques
+         has_many :dons
+         has_many :donnumeraires
+         has_many :signalements
+         has_many :loyerentreprises
          belongs_to :sex
 		 belongs_to :statut
 		 belongs_to :situation

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  statut_id: 1
+  situation_id: 1
+  actu_id: 1
+  nombre_de_personnes: MyString
+  nombre_handicapes: MyString
+  nombre_vieux: MyString
+  nombre_jeune_mere: MyString
+  nombre_jeune: MyString
+  nombre_nourisson: MyString
+
+two:
+  statut_id: 1
+  situation_id: 1
+  actu_id: 1
+  nombre_de_personnes: MyString
+  nombre_handicapes: MyString
+  nombre_vieux: MyString
+  nombre_jeune_mere: MyString
+  nombre_jeune: MyString
+  nombre_nourisson: MyString

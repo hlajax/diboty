@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Banques</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Statut</th>
+      <th>Situation</th>
+      <th>Actu</th>
+      <th>Nombre de personnes</th>
+      <th>Nombre handicapes</th>
+      <th>Nombre vieux</th>
+      <th>Nombre jeune mere</th>
+      <th>Nombre jeune</th>
+      <th>Nombre nourisson</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @banques.each do |banque| %>
+      <tr>
+        <td><%= banque.statut_id %></td>
+        <td><%= banque.situation_id %></td>
+        <td><%= banque.actu_id %></td>
+        <td><%= banque.nombre_de_personnes %></td>
+        <td><%= banque.nombre_handicapes %></td>
+        <td><%= banque.nombre_vieux %></td>
+        <td><%= banque.nombre_jeune_mere %></td>
+        <td><%= banque.nombre_jeune %></td>
+        <td><%= banque.nombre_nourisson %></td>
+        <td><%= link_to 'Show', banque %></td>
+        <td><%= link_to 'Edit', edit_banque_path(banque) %></td>
+        <td><%= link_to 'Destroy', banque, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Banque', new_banque_path %>

@@ -1,0 +1,64 @@
+<div class="container-fluid ">
+  <div class="row">
+    <%= render 'menus/main' %>
+    <div class="col-lg-6 col-12 m-top text-center">      
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title text-success text-maj text-bold" id="notice">
+    <%= notice %>
+  </h4>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<!--
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Statut:</strong>
+  <%= @banque.statut_id %>
+</p>
+
+<p>
+  <strong>Situation:</strong>
+  <%= @banque.situation_id %>
+</p>
+
+<p>
+  <strong>Actu:</strong>
+  <%= @banque.actu_id %>
+</p>
+
+<p>
+  <strong>Nombre de personnes:</strong>
+  <%= @banque.nombre_de_personnes %>
+</p>
+
+<p>
+  <strong>Nombre handicapes:</strong>
+  <%= @banque.nombre_handicapes %>
+</p>
+
+<p>
+  <strong>Nombre vieux:</strong>
+  <%= @banque.nombre_vieux %>
+</p>
+
+<p>
+  <strong>Nombre jeune mere:</strong>
+  <%= @banque.nombre_jeune_mere %>
+</p>
+
+<p>
+  <strong>Nombre jeune:</strong>
+  <%= @banque.nombre_jeune %>
+</p>
+
+<p>
+  <strong>Nombre nourisson:</strong>
+  <%= @banque.nombre_nourisson %>
+</p>
+
+<%= link_to 'Edit', edit_banque_path(@banque) %> |
+<%= link_to 'Back', banques_path %>

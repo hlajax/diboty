@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_26_160645) do
+ActiveRecord::Schema.define(version: 2020_04_27_075630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "actus", force: :cascade do |t|
+    t.string "nom"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "arrondissements", force: :cascade do |t|
     t.string "nom"
@@ -22,6 +28,21 @@ ActiveRecord::Schema.define(version: 2020_04_26_160645) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_arrondissements_on_slug", unique: true
+  end
+
+  create_table "banques", force: :cascade do |t|
+    t.integer "statut_id"
+    t.integer "situation_id"
+    t.integer "actu_id"
+    t.string "nombre_de_personnes"
+    t.string "nombre_handicapes"
+    t.string "nombre_vieux"
+    t.string "nombre_jeune_mere"
+    t.string "nombre_jeune"
+    t.string "nombre_nourisson"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "chef_id"
   end
 
   create_table "chefs", force: :cascade do |t|
@@ -96,6 +117,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_160645) do
     t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "chef_id"
   end
 
   create_table "dons", force: :cascade do |t|
@@ -108,6 +130,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_160645) do
     t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "chef_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -198,6 +221,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_160645) do
     t.integer "situation_id"
     t.integer "piece_id"
     t.string "numero_piece"
+    t.integer "chef_id"
   end
 
   create_table "loyers", force: :cascade do |t|
@@ -300,6 +324,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_160645) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "sex_id"
+    t.integer "chef_id"
   end
 
   create_table "situations", force: :cascade do |t|

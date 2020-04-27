@@ -15,7 +15,7 @@ class DonsController < ApplicationController
 
   # GET /dons/new
   def new
-    @don = Don.new
+    @don = current_chef.dons.build
   end
 
   # GET /dons/1/edit
@@ -25,7 +25,7 @@ class DonsController < ApplicationController
   # POST /dons
   # POST /dons.json
   def create
-    @don = Don.new(don_params)
+    @don = current_chef.dons.build(don_params)
 
     respond_to do |format|
       if @don.save
@@ -70,6 +70,6 @@ class DonsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def don_params
-      params.require(:don).permit(:nom, :nom_entreprise, :numero_de_telephone, :email, :adresse, :detail, :date)
+      params.require(:don).permit(:nom, :nom_entreprise, :numero_de_telephone, :email, :adresse, :detail, :date, :chef_id)
     end
 end

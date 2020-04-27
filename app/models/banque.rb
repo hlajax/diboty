@@ -1,0 +1,6 @@
+class Banque < ApplicationRecord
+	belongs_to :chef
+	belongs_to :situation
+	belongs_to :statut
+	belongs_to :actu
+end

@@ -1,36 +1,14 @@
-<div class="container m-top">
+<div class="container bg-warning p-2">
   <div class="row">
-    <div class="col-lg-2 col-12">
-      <a href="/"><img src="https://res.cloudinary.com/aseed/image/upload/v1587105475/logo_ry2vew.png" alt="logo" class="img-fluid"></a>
+    <div class="col-lg-6 col-3">
+      <a href="/"><img src="https://res.cloudinary.com/aseed/image/upload/v1587919681/logo_final_kits_odrfgb.png" class="logo"></a>
     </div>
-    <div class="col-lg-10 col-12">
-      <ul class="nav float-right">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bénéficiaire</a>
-            <div class="dropdown-menu">
-              <%=link_to "Recevoir des kits alimentaires", new_kit_path,class:"dropdown-item" %>
-              <%=link_to "la gratuité du logement", new_loyer_path,class:"dropdown-item" %>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Donateur</a>
-            <div class="dropdown-menu">
-              <%=link_to "Offrir un don en nature", new_don_path,class:"dropdown-item" %>
-              <%=link_to "Offrir un don en numéraire", new_don_numeraire_path,class:"dropdown-item" %>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Infos Utiles</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">connaître les mesures d'accompagnent</a>
-              <a class="dropdown-item" href="#">signalez des abus des forces de sécurité et de défenses</a>
-              <a class="dropdown-item" href="#">signalez des personnes qui violent les msures de confinement</a>
-              <a class="dropdown-item" href="#">
-              problème d'eau et d'éléctricité dans votre zone
-              </a>
-            </div>
-          </li>
-      </ul>
+    <div class="col-lg-6 col-6 text-center">
+      <a href="/"><img src="https://cdn.iconscout.com/icon/free/png-256/profile-417-1163876.png" class="logo"></a>
+    </div>
+        <div class="col-lg-6 col-3 text-center">
+          <small><%=current_chef.nom%></small>
+
     </div>
   </div>
 </div>

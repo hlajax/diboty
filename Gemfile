@@ -25,6 +25,8 @@ gem 'friendly_id', '~> 5.3'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 gem 'popper_js', '~> 1.14.5'
 gem 'devise'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

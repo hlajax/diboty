@@ -6,4 +6,5 @@ class Loyerentreprise < ApplicationRecord
 	belongs_to :construction
 	belongs_to :piece
 	belongs_to :situation
+	belongs_to :chef
 end
