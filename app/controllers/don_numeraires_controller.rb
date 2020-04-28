@@ -1,6 +1,6 @@
 class DonNumerairesController < ApplicationController
   before_action :set_don_numeraire, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_chef!
   # GET /don_numeraires
   # GET /don_numeraires.json
   def index
@@ -28,7 +28,7 @@ class DonNumerairesController < ApplicationController
 
     respond_to do |format|
       if @don_numeraire.save
-        format.html { redirect_to @don_numeraire, notice: 'Merci pour votre Don !' }
+        format.html { redirect_to root_path, notice: 'Merci pour votre initiative !' }
         format.json { render :show, status: :created, location: @don_numeraire }
       else
         format.html { render :new }

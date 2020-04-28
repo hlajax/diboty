@@ -1,6 +1,6 @@
 class BanquesController < ApplicationController
   before_action :set_banque, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_chef!
   # GET /banques
   # GET /banques.json
   def index
@@ -28,7 +28,7 @@ class BanquesController < ApplicationController
 
     respond_to do |format|
       if @banque.save
-        format.html { redirect_to @banque, notice: 'Demande envoyée !' }
+        format.html { redirect_to root_path, notice: 'Demande envoyée !' }
         format.json { render :show, status: :created, location: @banque }
       else
         format.html { render :new }

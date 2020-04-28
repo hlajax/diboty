@@ -1,6 +1,6 @@
 class LoyerentreprisesController < ApplicationController
   before_action :set_loyerentreprise, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_chef!
   # GET /loyerentreprises
   # GET /loyerentreprises.json
   def index
@@ -28,7 +28,7 @@ class LoyerentreprisesController < ApplicationController
 
     respond_to do |format|
       if @loyerentreprise.save
-        format.html { redirect_to @loyerentreprise, notice: 'Demande envoyée !' }
+        format.html { redirect_to root_path, notice: 'Demande envoyée !' }
         format.json { render :show, status: :created, location: @loyerentreprise }
       else
         format.html { render :new }

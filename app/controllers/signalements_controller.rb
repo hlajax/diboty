@@ -1,6 +1,6 @@
 class SignalementsController < ApplicationController
   before_action :set_signalement, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_chef!
   # GET /signalements
   # GET /signalements.json
   def index

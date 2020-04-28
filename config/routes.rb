@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :actualites
+  resources :dashboard
   resources :actus
   resources :menus
   resources :banques
@@ -24,7 +26,7 @@ Rails.application.routes.draw do
   resources :villes
   resources :provinces
     authenticated :chef do
-    root 'menus#index', as: :authenticated_root
+    root 'dashboard#index', as: :authenticated_root
   end
     devise_scope :chef do
     get '/chefs/sign_out' => 'devise/sessions#destroy'

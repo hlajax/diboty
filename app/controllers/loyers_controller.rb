@@ -28,7 +28,7 @@ class LoyersController < ApplicationController
 
     respond_to do |format|
       if @loyer.save
-        format.html { redirect_to @loyer, notice: 'Demande envoyée !' }
+        format.html { redirect_to root_path, notice: 'Demande envoyée !' }
         format.json { render :show, status: :created, location: @loyer }
       else
         format.html { render :new }

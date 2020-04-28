@@ -177,5 +177,12 @@ label{
 .dropdown-item{
 	font-size: 13px;
 }
+.card-title{
+	font-size: 13px;
+	font-weight:bold;
+}
+.card-title a{
+	color:black;
+}
 
  }

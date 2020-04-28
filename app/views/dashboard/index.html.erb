@@ -1,0 +1,73 @@
+<div class="container-fluid">
+	<div class="row">
+    <%=render "menus/main" %>	
+    </div>
+    <div class="row p-2">
+    	<div class="col-12 text-center">
+    		<p class="text-success" id="notice">
+    		 	<small><%= notice %></small>
+    		</p>
+    		<h5 class="titre m-top">Famille <%=current_chef.nom%></h5>
+    	</div>
+    	    	<div class="col-6">
+    		<a href="/menus" class="btn btn-kit-yellow btn-sm">
+    			<small>Nouvelle demande</small> <i class="fas fa-plus"></i>
+    		</a>
+
+    	</div>
+    	<div class="col-6">
+    		<a href="#" class="btn btn-kit-yellow btn-sm">
+    			<small>Nouveau compte</small> <i class="fas fa-user-plus"></i>
+    		</a>
+
+    	</div>
+    	<div class="col-12 m-top" style="border:1px solid #f2f2f2">
+    		<div class="row text-center">
+    			<div class="col-12 ">
+    				<p class="titre m-top">
+    				<small>Alertes sur vos comptes</small>
+    				</p>
+    			</div>
+    			<div class="col-6 mb-2">
+    				<a href="#" class="btn btn-kit-yellow btn-sm">
+    			Principal <span class="badge badge-danger">0</span>
+    				</a>
+    			</div>
+    			<div class="col-6 mb-2">
+    			<a href="#" class="btn btn-kit-red btn-sm">
+    			Second <span class="badge badge-danger">0</span>
+    			</a>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="row">
+    	<div class="col-12">
+    		<h6 class="titre m-top">Actualités COVID-19</h6>
+    	</div>
+    	<hr>
+    	<% @actualites.each do |actualite| %>
+    	<div class="col-12">
+    		    
+    		    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4 col-4">
+      <%= image_tag actualite.photo.url, class:"card-img" %>
+    </div>
+    <div class="col-md-8 col-8">
+      <div class="card-body">
+        <h5 class="card-title">
+        	<a href="<%= actualite.lien %>" target="_blank">
+        		<%= actualite.titre %>
+        	</a>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    	</div>
+    	<% end %>
+    </div>
+</div>
