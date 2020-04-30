@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :banquealimentaires
   resources :comptes
   resources :actualites
   resources :dashboard

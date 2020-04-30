@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <div class="row">
+    <%=render "menus/main" %>
+    <div class="col-lg-6 offset-lg-1 col-12 p-4">
+<%= form_with(model: banquealimentaire, local: true) do |form| %>
+  <% if banquealimentaire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(banquealimentaire.errors.count, "error") %> prohibited this banquealimentaire from being saved:</h2>
+
+      <ul>
+      <% banquealimentaire.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+      <div class="form-group col-lg-4 col-12">
+    <%= form.label :sélectionner_un_compte %>
+    <%= form.collection_select :compte_id, current_chef.comptes.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+  </div>
+      <div class="form-group col-lg-4 col-12">
+    <%= form.label :statut_matrimonial %>
+    <%= form.collection_select :statut_id, Statut.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+  </div>
+
+    <div class="form-group col-lg-4 col-12">
+    <%= form.label :situation_professionnelle_du_conjoint %>
+    <%= form.collection_select :situation_id, Situation.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+  </div>
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :situation_actuelle %>
+    <%= form.collection_select :actu_id, Actu.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+  </div>
+
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :nombre_de_personnes %>
+    <%= form.text_field :nombre_de_personnes, class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :nombre_handicapes %>
+    <%= form.text_field :nombre_handicapes, class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :nombre_vieux %>
+    <%= form.text_field :nombre_vieux, class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :nombre_jeune_mere %>
+    <%= form.text_field :nombre_jeune_mere, class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :nombre_jeune %>
+    <%= form.text_field :nombre_jeune, class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :nombre_nourisson %>
+    <%= form.text_field :nombre_nourisson, class:"form-control", required: :true %>
+  </div>
+    <div class="form-group col-lg-4 col-12">
+    <%= form.hidden_field :distribue_id,class:"form-control", value: '2'  %>
+  </div>
+  <div class="col-lg-4 col-12">
+    <%= form.button 'Valider'.html_safe, type: :submit, class:"btn btn-kit-yellow btn-block", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Validation..."} %>
+<% end %>
+</div>
+</div>
+</div>

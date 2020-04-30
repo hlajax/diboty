@@ -5,7 +5,7 @@ class Chef < ApplicationRecord
          :recoverable, :rememberable, :validatable
          has_many :kits
          has_many :loyers
-         has_many :banques
+         has_many :banquealimentaires
          has_many :dons
          has_many :don_numeraires
          has_many :signalements

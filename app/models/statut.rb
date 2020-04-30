@@ -4,4 +4,5 @@ class Statut < ApplicationRecord
 	has_many :kits
 	has_many :chefs
   	has_many :comptes
+  	has_many :banquealimentaires
 end

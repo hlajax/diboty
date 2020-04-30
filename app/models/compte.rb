@@ -1,6 +1,6 @@
 class Compte < ApplicationRecord
 	belongs_to :chef
-	has_many :banques
+	has_many :banquealimentaires
 	has_many :loyers
 	has_many :loyerentreprises
 	belongs_to :sex

@@ -5,4 +5,5 @@ class Situation < ApplicationRecord
 	has_many :loyerentreprises
 	has_many :chefs
   	has_many :comptes
+  	has_many :banquealimentaires
 end
