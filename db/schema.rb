@@ -38,23 +38,6 @@ ActiveRecord::Schema.define(version: 2020_04_30_115101) do
     t.index ["slug"], name: "index_arrondissements_on_slug", unique: true
   end
 
-  create_table "banques", force: :cascade do |t|
-    t.integer "statut_id"
-    t.integer "situation_id"
-    t.integer "actu_id"
-    t.string "nombre_de_personnes"
-    t.string "nombre_handicapes"
-    t.string "nombre_vieux"
-    t.string "nombre_jeune_mere"
-    t.string "nombre_jeune"
-    t.string "nombre_nourisson"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "chef_id"
-    t.integer "distribue_id"
-    t.integer "compte_id"
-  end
-
   create_table "chefs", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
