@@ -69,6 +69,6 @@ class LoyersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def loyer_params
-      params.require(:loyer).permit(:nom_proprietaire, :date_de_naissance_proprietaire, :lieu_de_naissance_proprietaire,:piece_id, :numero_piece, :telephones_proprietaire, :email_proprietaire, :situation_id, :lieu_de_residence_proprietaire, :type_id, :construction_id, :province_id, :ville_id, :arrondissement_id, :loyer_mensuel, :loyer_trimestriel, :adresse, :quartier, :autre, :chef_id, :distribue_id,:actu_id)
+      params.require(:loyer).permit(:nom_proprietaire, :date_de_naissance_proprietaire, :lieu_de_naissance_proprietaire,:piece_id, :numero_piece, :telephones_proprietaire, :email_proprietaire, :situation_id, :lieu_de_residence_proprietaire, :type_id, :construction_id, :province_id, :ville_id, :arrondissement_id, :loyer_mensuel, :loyer_trimestriel, :adresse, :quartier, :autre, :chef_id, :distribue_id,:actu_id, :compte_id)
     end
 end

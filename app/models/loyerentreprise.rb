@@ -9,4 +9,5 @@ class Loyerentreprise < ApplicationRecord
 	belongs_to :chef
 	belongs_to :distribue
 	belongs_to :actu
+	belongs_to :compte
 end

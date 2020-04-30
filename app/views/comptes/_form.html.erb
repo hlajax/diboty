@@ -1,0 +1,114 @@
+<div class="container-fluid">
+  <div class="row">
+    <%=render "menus/main" %>
+    <div class="col-lg-6 offset-lg-1 col-12 p-4">
+<%= form_with(model: compte, local: true) do |form| %>
+  <% if compte.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(compte.errors.count, "error") %> prohibited this compte from being saved:</h2>
+
+      <ul>
+      <% compte.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+      <div class="row">
+        <div class="col-12">
+          <h4 class="titre">Créez un Compte </h4>
+      <p>
+        <small>(pour vos proches ne pouvant pas accéder à internet)</small>
+      </p>
+        </div>
+        <div class="form-group col-lg-4 col-12">
+          <%= form.label :nom %>
+          <%= form.text_field :nom, class:"form-control", required: :true %>
+        </div>
+        <div class="form-group col-lg-7 col-12">
+          <%= form.label :nom_complet %><br />
+          <%= form.text_field :nom_chef, class:"form-control"%>
+        </div>
+              <div class="form-group col-lg-5 col-12">
+    <%= form.label :nationalite %><br />
+    <%= form.text_field :nationalite, class:"form-control"%>
+  </div>
+  <div class="form-group col-lg-5 col-12">
+    <%= form.label :numero_de_téléphone %><br />
+    <%= form.telephone_field :telephone, class:"form-control"%>
+  </div>
+  
+    <div class="form-group col-lg-3 col-12">
+    <%= form.label :sexe %>
+    <%= form.collection_select :sex_id, Sex.all, :id, :nom, {prompt:"Choisir"},class:"select-css form-control", required: :true  %>
+  </div>
+    <div class="form-group col-lg-4 col-12">
+    <%= form.label :date_de_naissance %>
+    <%= form.date_field :date,class:"form-control", required: :true  %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <%= form.label :lieu_de_naissance %>
+    <%= form.text_field :lieu,class:"form-control", required: :true  %>
+  </div>
+  
+      <div class="form-group col-lg-4 col-12">
+    <%= form.label :statut_matrimonial %>
+    <%= form.collection_select :statut_id, Statut.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+  </div>
+
+    <div class="form-group col-lg-4 col-12">
+    <%= form.label :situation_professionnelle %>
+    <%= form.collection_select :situation_id, Situation.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+  </div>
+
+  
+  
+    <div class="form-group col-lg-6 col-12">
+    <%= form.label :province %>
+    <%= form.collection_select :province_id, Province.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+  </div>
+
+    <div class="form-group col-lg-6 col-12">
+    <%= form.label :ville %>
+    <%= form.collection_select :ville_id, Ville.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :arrondissement %>
+    <%= form.collection_select :arrondissement_id, Arrondissement.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :commune %>
+    <%= form.text_field :commune,class:"form-control", required: :true  %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :quartier %>
+    <%= form.text_field :quartier,class:"form-control", required: :true  %>
+  </div>
+
+    <div class="form-group col-lg-6 col-12">
+    <%= form.label :cnamgs %>
+    <%= form.text_field :cnamgs,class:"form-control", required: :true  %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :cnss %>
+    <%= form.text_field :cnss,class:"form-control", required: :true  %>
+  </div>
+
+    <div class="form-group col-lg-6 col-12">
+    <%= form.label :numéro_one %>
+    <%= form.text_field :one,class:"form-control", required: :true  %>
+  </div>
+
+  <div class="col-lg-4 col-12">
+    <%= form.button 'Valider'.html_safe, type: :submit, class:"btn btn-kit-yellow btn-block", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Validation..."} %>
+  </div>
+  </div>
+<% end %>
+</div>
+</div>
+</div>

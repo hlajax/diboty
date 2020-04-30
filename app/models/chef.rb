@@ -10,6 +10,7 @@ class Chef < ApplicationRecord
          has_many :don_numeraires
          has_many :signalements
          has_many :loyerentreprises
+         has_many :comptes
          belongs_to :sex
 		 belongs_to :statut
 		 belongs_to :situation

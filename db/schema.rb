@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_28_093149) do
+ActiveRecord::Schema.define(version: 2020_04_30_094858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_04_28_093149) do
     t.datetime "updated_at", null: false
     t.integer "chef_id"
     t.integer "distribue_id"
+    t.integer "compte_id"
   end
 
   create_table "chefs", force: :cascade do |t|
@@ -83,6 +84,29 @@ ActiveRecord::Schema.define(version: 2020_04_28_093149) do
     t.integer "arrondissement_id"
     t.index ["email"], name: "index_chefs_on_email", unique: true
     t.index ["reset_password_token"], name: "index_chefs_on_reset_password_token", unique: true
+  end
+
+  create_table "comptes", force: :cascade do |t|
+    t.string "nom"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "chef_id"
+    t.string "nom_chef"
+    t.string "nationalite"
+    t.string "telephone"
+    t.string "date"
+    t.string "lieu"
+    t.string "commune"
+    t.string "quartier"
+    t.string "cnamgs"
+    t.string "cnss"
+    t.string "one"
+    t.integer "sex_id"
+    t.integer "statut_id"
+    t.integer "situation_id"
+    t.integer "province_id"
+    t.integer "ville_id"
+    t.integer "arrondissement_id"
   end
 
   create_table "constructions", force: :cascade do |t|
@@ -233,6 +257,7 @@ ActiveRecord::Schema.define(version: 2020_04_28_093149) do
     t.integer "chef_id"
     t.integer "actu_id"
     t.integer "distribue_id"
+    t.integer "compte_id"
   end
 
   create_table "loyers", force: :cascade do |t|
@@ -275,6 +300,7 @@ ActiveRecord::Schema.define(version: 2020_04_28_093149) do
     t.integer "chef_id"
     t.integer "distribue_id"
     t.integer "actu_id"
+    t.integer "compte_id"
   end
 
   create_table "natures", force: :cascade do |t|

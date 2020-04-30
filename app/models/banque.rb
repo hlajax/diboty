@@ -4,4 +4,5 @@ class Banque < ApplicationRecord
 	belongs_to :statut
 	belongs_to :actu
 	belongs_to :distribue
+	belongs_to :compte
 end

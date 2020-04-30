@@ -4,4 +4,6 @@ class Province < ApplicationRecord
   	has_many :villes
   	has_many :loyers
   	has_many :loyerentreprises
+  	has_many :chefs
+  	has_many :comptes
 end

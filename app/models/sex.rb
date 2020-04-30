@@ -3,4 +3,6 @@ class Sex < ApplicationRecord
   	friendly_id :nom, use: :slugged
   	has_many :loyers
   	has_many :signalements
+  	has_many :chefs
+  	has_many :comptes
 end
