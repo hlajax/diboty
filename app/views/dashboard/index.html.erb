@@ -57,9 +57,9 @@
     <div class="col-md-8 col-8">
       <div class="card-body">
         <h5 class="card-title">
-        	<a href="<%= actualite.lien %>" target="_blank">
+        	<%=link_to actualite do %>
         		<%= actualite.titre %>
-        	</a>
+        	<%end%>
         </h5>
       </div>
     </div>

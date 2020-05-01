@@ -10,6 +10,7 @@ class ActualitesController < ApplicationController
   # GET /actualites/1
   # GET /actualites/1.json
   def show
+    @actualites = Actualite.all
   end
 
   # GET /actualites/new
@@ -64,11 +65,11 @@ class ActualitesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_actualite
-      @actualite = Actualite.find(params[:id])
+      @actualite = Actualite.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def actualite_params
-      params.require(:actualite).permit(:titre, :photo, :lien)
+      params.require(:actualite).permit(:titre, :photo, :contenu, :slug)
     end
 end

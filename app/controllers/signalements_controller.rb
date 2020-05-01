@@ -28,7 +28,7 @@ class SignalementsController < ApplicationController
 
     respond_to do |format|
       if @signalement.save
-        format.html { redirect_to @signalement, notice: 'Merci Pour votre Signalement !' }
+        format.html { redirect_to root_path, notice: 'Merci Pour votre Signalement !' }
         format.json { render :show, status: :created, location: @signalement }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class SignalementsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def signalement_params
-      params.require(:signalement).permit(:pays, :ville, :nom, :sex_id, :passeport, :contact_whatsapp, :date, :raison_du_sejour, :enfants, :pieces_jointes, :chef_id)
+      params.require(:signalement).permit(:pays, :ville, :nom, :sex_id, :contact_whatsapp, :date, :raison_du_sejour, :enfants, :pieces_jointes, :chef_id)
     end
 end

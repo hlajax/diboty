@@ -16,51 +16,57 @@
   <% end %>
 
       <div class="form-group col-lg-4 col-12">
-    <%= form.label :sélectionner_un_compte %>
+    <label for="compte"><small>Sélectionner un compte</small></label>
     <%= form.collection_select :compte_id, current_chef.comptes.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
       <div class="form-group col-lg-4 col-12">
-    <%= form.label :statut_matrimonial %>
+    <label for="statut"><small>Statut Matrimonial</small></label>
     <%= form.collection_select :statut_id, Statut.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
     <div class="form-group col-lg-4 col-12">
-    <%= form.label :situation_professionnelle_du_conjoint %>
+    <label for=""><small>Statut Professionnel du conjoint</small></label>
     <%= form.collection_select :situation_id, Situation.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
   <div class="form-group col-lg-4 col-12">
-    <%= form.label :situation_actuelle %>
+    <label for=""><small>Situation Professionnelle Actuelle</small></label>
     <%= form.collection_select :actu_id, Actu.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
 
   <div class="form-group col-lg-4 col-12">
-    <%= form.label :nombre_de_personnes %>
+    <label for=""><small>Nombre de personnes vivant dans le logement</small></label>
     <%= form.text_field :nombre_de_personnes, class:"form-control", required: :true %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
-    <%= form.label :nombre_handicapes %>
+    <label for=""><small>Nombre de personnes en situation d'handicap</small></label>
     <%= form.text_field :nombre_handicapes, class:"form-control", required: :true %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
-    <%= form.label :nombre_vieux %>
+    <label for=""><small>Nombre de personnes âgées de 6 ans et plus</small></label>
     <%= form.text_field :nombre_vieux, class:"form-control", required: :true %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
-    <%= form.label :nombre_jeune_mere %>
+    <label for="">
+      <small>Nombre de personnes mères célibataires âgées de moins de 45 ans</small>
+    </label>
     <%= form.text_field :nombre_jeune_mere, class:"form-control", required: :true %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
-    <%= form.label :nombre_jeune %>
+     <label for="">
+      <small>Nombre de personnes jeunes en difficulité sociales de 16 à 25 ans</small>
+    </label>
     <%= form.text_field :nombre_jeune, class:"form-control", required: :true %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
-    <%= form.label :nombre_nourisson %>
+     <label for="">
+      <small>Nombre de nourrissons</small>
+    </label>
     <%= form.text_field :nombre_nourisson, class:"form-control", required: :true %>
   </div>
     <div class="form-group col-lg-4 col-12">

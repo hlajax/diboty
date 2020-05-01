@@ -1,19 +1,39 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Titre:</strong>
-  <%= @actualite.titre %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @actualite.photo %>
-</p>
-
-<p>
-  <strong>Lien:</strong>
-  <%= @actualite.lien %>
-</p>
-
-<%= link_to 'Edit', edit_actualite_path(@actualite) %> |
-<%= link_to 'Back', actualites_path %>
+<div class="container-fluid">
+	<div class="row">
+		<%=render "menus/main" %>
+    	<div class="col-lg-6 offset-lg-1 col-12 p-4">
+    		<h3><%= @actualite.titre %></h3>
+    		<%= image_tag @actualite.photo.url, class:"img-fluid" %>
+    		<p style="font-size:14px;"><%= @actualite.contenu %></p>
+    	</div>
+	</div>
+	    <div class="row">
+    	<div class="col-12">
+    		<h6 class="titre m-top">Actualités COVID-19</h6>
+    	</div>
+    	<hr>
+    	<% @actualites.each do |actualite| %>
+    	<div class="col-12">
+    		    
+    		    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4 col-4">
+      <%= image_tag actualite.photo.url, class:"card-img" %>
+    </div>
+    <div class="col-md-8 col-8">
+      <div class="card-body">
+        <h5 class="card-title">
+        	<%=link_to actualite do %>
+        		<%= actualite.titre %>
+        	<%end%>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+      
+        		<%= link_to "Retour à la page précédente", :back, class:"btn btn-kit-yellow btn-block" %>
+    	</div>
+    	<% end %>
+    </div>
+</div>

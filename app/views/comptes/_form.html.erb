@@ -22,85 +22,85 @@
       </p>
         </div>
         <div class="form-group col-lg-4 col-12">
-          <%= form.label :nom %>
+          <label for="compte"><small>nom de la famille</small></label>
           <%= form.text_field :nom, class:"form-control", required: :true %>
         </div>
         <div class="form-group col-lg-7 col-12">
-          <%= form.label :nom_complet %><br />
+          <label for="compte"><small>nom du chef de famille</small></label>
           <%= form.text_field :nom_chef, class:"form-control"%>
         </div>
               <div class="form-group col-lg-5 col-12">
-    <%= form.label :nationalite %><br />
+    <label for="compte"><small>nationalité</small></label>
     <%= form.text_field :nationalite, class:"form-control"%>
   </div>
   <div class="form-group col-lg-5 col-12">
-    <%= form.label :numero_de_téléphone %><br />
+    <label for="compte"><small>numéro de téléphone</small></label>
     <%= form.telephone_field :telephone, class:"form-control"%>
   </div>
   
     <div class="form-group col-lg-3 col-12">
-    <%= form.label :sexe %>
+    <label for="compte"><small>sexe</small></label>
     <%= form.collection_select :sex_id, Sex.all, :id, :nom, {prompt:"Choisir"},class:"select-css form-control", required: :true  %>
   </div>
     <div class="form-group col-lg-4 col-12">
-    <%= form.label :date_de_naissance %>
+    <label for="compte"><small>date de naissance</small></label>
     <%= form.date_field :date,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
-    <%= form.label :lieu_de_naissance %>
+    <label for="compte"><small>lieu de naissance</small></label>
     <%= form.text_field :lieu,class:"form-control", required: :true  %>
   </div>
   
       <div class="form-group col-lg-4 col-12">
-    <%= form.label :statut_matrimonial %>
+    <label for="compte"><small>Statut matrimonial du chef de famille</small></label>
     <%= form.collection_select :statut_id, Statut.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
     <div class="form-group col-lg-4 col-12">
-    <%= form.label :situation_professionnelle %>
+    <label for="compte"><small>situation professionnelle du chef de famille</small></label>
     <%= form.collection_select :situation_id, Situation.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
   
   
     <div class="form-group col-lg-6 col-12">
-    <%= form.label :province %>
+    <label for="compte"><small>province</small></label>
     <%= form.collection_select :province_id, Province.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
     <div class="form-group col-lg-6 col-12">
-    <%= form.label :ville %>
+    <label for="compte"><small>ville</small></label>
     <%= form.collection_select :ville_id, Ville.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :arrondissement %>
+    <label for="compte"><small>arrondissement</small></label>
     <%= form.collection_select :arrondissement_id, Arrondissement.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :commune %>
+    <label for="compte"><small>commune</small></label>
     <%= form.text_field :commune,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :quartier %>
+    <label for="compte"><small>quartier</small></label>
     <%= form.text_field :quartier,class:"form-control", required: :true  %>
   </div>
 
     <div class="form-group col-lg-6 col-12">
-    <%= form.label :cnamgs %>
+    <label for="compte"><small>cnamgs</small></label>
     <%= form.text_field :cnamgs,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :cnss %>
+    <label for="compte"><small>cnss</small></label>
     <%= form.text_field :cnss,class:"form-control", required: :true  %>
   </div>
 
     <div class="form-group col-lg-6 col-12">
-    <%= form.label :numéro_one %>
+    <label for="compte"><small>numéro one</small></label>
     <%= form.text_field :one,class:"form-control", required: :true  %>
   </div>
 

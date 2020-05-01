@@ -22,38 +22,38 @@
       <h5 class="text-titre">Informations</h5>
     </div>
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :nom %>
+    <label for="compte"><small>nom</small></label>
     <%= form.text_field :nom,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :nom_entreprise %>
-    <%= form.text_field :nom_entreprise,class:"form-control", required: :true  %>
+    <label for="compte"><small>nom de l'entreprise(laissez vide si vous êtes une personne physique)</small></label>
+    <%= form.text_field :nom_entreprise,class:"form-control" %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :numero_de_telephone %>
+    <label for="compte"><small>numéro de téléphone</small></label>
     <%= form.telephone_field :numero_de_telephone,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :email %>
+    <label for="compte"><small>adresse email</small></label>
     <%= form.email_field :email,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :adresse %>
+    <label for="compte"><small>adressee</small></label>
     <%= form.text_field :adresse,class:"form-control", required: :true  %>
   </div>
 
 
 
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :date_de_depot_a_la_banque_alimentaire %>
+    <label for="compte"><small>date d'éxécution de la promesse</small></label>
     <%= form.date_field :date,class:"form-control", required: :true  %>
   </div>
   <div class="form-group col-lg-6 col-12">
-    <%= form.label :details_du_don %>
+    <label for="compte"><small>détails du don</small></label>
     <%= form.text_area :detail,class:"form-control", required: :true  %>
   </div>
 
