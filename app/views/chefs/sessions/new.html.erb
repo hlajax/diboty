@@ -15,7 +15,8 @@
 
   <div class="form-group col-12">
     <%= f.label :mot_de_passe %><br />
-    <%= f.password_field :password, class: "form-control" %>
+    <%= f.password_field :password, class: "form-control", value: "", id:"password-field" %>
+     <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -35,3 +36,16 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(".toggle-password").click(function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+</script>

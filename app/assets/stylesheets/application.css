@@ -18,6 +18,14 @@ body{
 	background-color: white;
 	font-family: 'Open Sans', sans-serif;
 }
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  margin-right: 25px;
+  position: relative;
+  z-index: 2;
+}
 .logo{
 	width:10%;
 }
