@@ -69,9 +69,9 @@
     <%= form.collection_select :province_id, Province.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
-    <div class="form-group col-lg-6 col-12">
-    <label for="compte"><small>ville</small></label>
-    <%= form.collection_select :ville_id, Ville.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
+   <div class="form-group col-lg-6 col-12">
+    <label for="compte"><small>commune/ville/département</small></label>
+    <%= form.text_field :commune,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-6 col-12">
@@ -79,13 +79,10 @@
     <%= form.collection_select :arrondissement_id, Arrondissement.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
-  <div class="form-group col-lg-6 col-12">
-    <label for="compte"><small>commune</small></label>
-    <%= form.text_field :commune,class:"form-control", required: :true  %>
-  </div>
+ 
 
   <div class="form-group col-lg-6 col-12">
-    <label for="compte"><small>quartier</small></label>
+    <label for="compte"><small>quartier/village</small></label>
     <%= form.text_field :quartier,class:"form-control", required: :true  %>
   </div>
 

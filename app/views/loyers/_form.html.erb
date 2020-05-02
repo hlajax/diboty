@@ -37,10 +37,7 @@
     <label for="compte"><small>province</small></label>
     <%= form.collection_select :province_id, Province.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>
   </div>
-    <div class="form-group col-lg-6 col-12">
-    <label for="compte"><small>ville</small></label>
-    <%= form.collection_select :ville_id, Ville.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>
-  </div>
+
     <div class="form-group col-lg-6 col-12">
     <label for="compte"><small>arrondissement</small></label>
     <%= form.collection_select :arrondissement_id, Arrondissement.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>

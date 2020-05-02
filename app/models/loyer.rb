@@ -1,7 +1,6 @@
 class Loyer < ApplicationRecord
 	mount_uploader :numero_piece, FichierUploader
 	belongs_to :province
-	belongs_to :ville
 	belongs_to :arrondissement
 	belongs_to :type
 	belongs_to :construction
