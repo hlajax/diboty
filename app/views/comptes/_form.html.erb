@@ -27,15 +27,15 @@
         </div>
         <div class="form-group col-lg-7 col-12">
           <label for="compte"><small>nom du chef de famille</small></label>
-          <%= form.text_field :nom_chef, class:"form-control"%>
+          <%= form.text_field :nom_chef, class:"form-control", required: :true%>
         </div>
               <div class="form-group col-lg-5 col-12">
     <label for="compte"><small>nationalité</small></label>
-    <%= form.text_field :nationalite, class:"form-control"%>
+    <%= form.text_field :nationalite, class:"form-control", required: :true%>
   </div>
   <div class="form-group col-lg-5 col-12">
     <label for="compte"><small>numéro de téléphone</small></label>
-    <%= form.telephone_field :telephone, class:"form-control"%>
+    <%= form.telephone_field :telephone, class:"form-control", required: :true%>
   </div>
   
     <div class="form-group col-lg-3 col-12">
