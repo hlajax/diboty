@@ -61,9 +61,10 @@ body{
  }
 label{
 	font-size: 12px;
+	text-transform: uppercase;
 }
 .form-group{
-	text-transform: uppercase;
+	
 }
 .form-group input[type="text"]{
 	font-size: 14px;
