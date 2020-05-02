@@ -80,17 +80,17 @@
     <%= f.text_field :commune,class:"form-control", required: :true  %>
   </div>
 
+    <div class="form-group col-lg-6 col-12">
+    <label for="compte"><small>quartier/village</small></label>
+    <%= f.text_field :quartier,class:"form-control", required: :true  %>
+  </div>
+
   <div class="form-group col-lg-6 col-12">
     <label for="compte"><small>arrondissement</small></label>
     <%= f.collection_select :arrondissement_id, Arrondissement.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
 
-  
 
-  <div class="form-group col-lg-6 col-12">
-    <label for="compte"><small>quartier/village</small></label>
-    <%= f.text_field :quartier,class:"form-control", required: :true  %>
-  </div>
 
     <div class="form-group col-lg-6 col-12">
     <label for="compte"><small>cnamgs</small></label>
