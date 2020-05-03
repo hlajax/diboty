@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_01_103235) do
+ActiveRecord::Schema.define(version: 2020_05_03_105149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,9 @@ ActiveRecord::Schema.define(version: 2020_05_01_103235) do
     t.integer "compte_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "secteur"
+    t.string "employeur"
+    t.string "revenu"
   end
 
   create_table "chefs", force: :cascade do |t|

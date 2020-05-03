@@ -32,7 +32,21 @@
     <label for=""><small>Situation Professionnelle Actuelle</small></label>
     <%= form.collection_select :actu_id, Actu.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
+  
+  <div class="form-group col-lg-4 col-12">
+    <label for=""><small>Secteur d'activité</small></label>
+    <%= form.text_field :secteur, class:"form-control", required: :true %>
+  </div>
 
+  <div class="form-group col-lg-4 col-12">
+    <label for=""><small>Employeur</small></label>
+    <%= form.text_field :employeur, class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <label for=""><small>Revenu Mensuel</small></label>
+    <%= form.text_field :revenu, class:"form-control", required: :true %>
+  </div>
 
   <div class="form-group col-lg-4 col-12">
     <label for=""><small>Nombre de personnes vivant dans le logement</small></label>
