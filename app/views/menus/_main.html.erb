@@ -4,7 +4,11 @@
       <a href="/"><img src="https://res.cloudinary.com/aseed/image/upload/v1587919681/logo_final_kits_odrfgb.png" class="logo"></a>
     </div>
     <div class="col-lg-6 col-5 text-center">
+      <% if current_chef.photo.blank? %>
       <a href="/"><img src="https://cdn.iconscout.com/icon/free/png-256/profile-417-1163876.png" class="logo"></a>
+      <% else %>
+      <%=image_tag current_chef.photo.url, class:"logo-true"%>
+      <% end %>
     </div>
         <div class="col-lg-6 col-4 text-center">
           <div class="dropdown dropleft">
@@ -13,6 +17,7 @@
   </a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <%=link_to "Modifier mes infos", edit_chef_registration_path, class:"dropdown-item" %>
     <%=link_to "Déconnexion", destroy_chef_session_path, class:"dropdown-item" %>
   </div>
 </div>

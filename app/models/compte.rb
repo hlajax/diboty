@@ -1,4 +1,5 @@
 class Compte < ApplicationRecord
+	mount_uploader :photo, FichierUploader
 	belongs_to :chef
 	has_many :banquealimentaires
 	has_many :loyers

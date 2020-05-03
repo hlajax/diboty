@@ -16,4 +16,5 @@ class Chef < ApplicationRecord
 		 belongs_to :situation
 		 belongs_to :province
 		 belongs_to :arrondissement
+     mount_uploader :photo, FichierUploader
 end

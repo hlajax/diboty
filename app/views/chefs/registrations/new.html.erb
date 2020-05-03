@@ -43,7 +43,7 @@
   
   <div class="form-group col-lg-4 col-12">
     <label for="compte"><small>date de naissance</small></label>
-    <%= f.date_field :date,class:"form-control", required: :true  %>
+    <%= f.text_field :date,class:"form-control", required: :true  %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
@@ -117,6 +117,10 @@
     <%= f.text_field :lieu_de_priere,class:"form-control", required: :true  %>
   </div>
 
+  <div class="form-group col-lg-4 col-12">
+          <label for="compte"><small>photo du chef de famille</small></label>
+          <%= f.file_field :photo %>
+        </div>
 
   <div class="col-lg-12 col-12">
     <%= f.button 'Valider et créer le compte'.html_safe, type: :submit, class:"btn btn-kit-yellow btn-block", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Création du compte..."} %>
