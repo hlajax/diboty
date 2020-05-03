@@ -69,6 +69,6 @@ class ComptesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def compte_params
-      params.require(:compte).permit(:nom, :nom_chef, :telephone, :sex_id, :situation_id, :statut_id, :province_id, :nationalite, :commune, :quartier, :date, :lieu, :cnamgs, :cnss, :one, :arrondissement_id, :chef_id)
+      params.require(:compte).permit(:nom, :nom_chef, :telephone, :sex_id, :situation_id, :statut_id, :province_id, :nationalite, :commune, :quartier, :date, :lieu, :cnamgs, :cnss, :one, :arrondissement_id, :chef_id, :nombreepouse)
     end
 end

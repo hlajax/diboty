@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_03_105149) do
+ActiveRecord::Schema.define(version: 2020_05_03_120954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -113,6 +113,7 @@ ActiveRecord::Schema.define(version: 2020_05_03_105149) do
     t.integer "province_id"
     t.integer "ville_id"
     t.integer "arrondissement_id"
+    t.string "nombreepouse"
   end
 
   create_table "constructions", force: :cascade do |t|

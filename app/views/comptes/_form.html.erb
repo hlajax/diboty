@@ -56,6 +56,10 @@
     <label for="compte"><small>Statut matrimonial du chef de famille</small></label>
     <%= form.collection_select :statut_id, Statut.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
+    <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>nombre d'épouses(pour marié polygame seulement)</small></label>
+    <%= form.text_field :nombreepouse,class:"form-control" %>
+  </div>
 
     <div class="form-group col-lg-4 col-12">
     <label for="compte"><small>situation professionnelle du chef de famille</small></label>
