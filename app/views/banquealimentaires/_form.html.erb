@@ -62,33 +62,33 @@
 
   <div class="form-group col-lg-4 col-12">
     <label for=""><small>Nombre de personnes en situation d'handicap</small></label>
-    <%= form.text_field :nombre_handicapes, class:"form-control", required: :true %>
+    <%= form.text_field :nombre_handicapes, class:"form-control" %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <label for=""><small>Nombre de personnes âgées de 6 ans et plus</small></label>
-    <%= form.text_field :nombre_vieux, class:"form-control", required: :true %>
+    <%= form.text_field :nombre_vieux, class:"form-control" %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
     <label for="">
       <small>Nombre de personnes mères célibataires âgées de moins de 45 ans</small>
     </label>
-    <%= form.text_field :nombre_jeune_mere, class:"form-control", required: :true %>
+    <%= form.text_field :nombre_jeune_mere, class:"form-control" %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
      <label for="">
       <small>Nombre de personnes jeunes en difficulité sociales de 16 à 25 ans</small>
     </label>
-    <%= form.text_field :nombre_jeune, class:"form-control", required: :true %>
+    <%= form.text_field :nombre_jeune, class:"form-control" %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
      <label for="">
       <small>Nombre de nourrissons</small>
     </label>
-    <%= form.text_field :nombre_nourisson, class:"form-control", required: :true %>
+    <%= form.text_field :nombre_nourisson, class:"form-control" %>
   </div>
     <div class="form-group col-lg-4 col-12">
     <%= form.hidden_field :distribue_id,class:"form-control", value: '2'  %>

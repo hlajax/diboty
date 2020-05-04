@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @siege.nom %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @siege.slug %>
+</p>
+
+<%= link_to 'Edit', edit_siege_path(@siege) %> |
+<%= link_to 'Back', sieges_path %>

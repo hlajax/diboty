@@ -29,34 +29,15 @@
     <label for="compte"><small>Sélectionner un compte</small></label>
     <%= form.collection_select :compte_id, current_chef.comptes.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true  %>
   </div>
-  <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>nom du bailleur</small></label>
-    <%= form.text_field :nom_proprietaire,class:"form-control", required: :true %>
-  </div>
 
-
-  <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>numéro de téléphone</small></label>
-    <%= form.telephone_field :telephones_proprietaire,class:"form-control", required: :true %>
-  </div>
-
-  <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>adresse email</small></label>
-    <%= form.email_field :email_proprietaire,class:"form-control", required: :true %>
-  </div>
-  <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>statut du bailleur</small></label>
-    <%= form.collection_select :situation_id, Situation.all, :id, :nom, {prompt:"Choisir"},class:"select-css form-control", required: :true %>
-  </div>
-    <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>situation actuelle</small></label>
-    <%= form.collection_select :actu_id, Actu.all, :id, :nom, {prompt:"Choisir"},class:"select-css form-control", required: :true %>
-  </div>
-<div class="col-12">
-</div>
   <div class="form-group col-lg-4 col-12">
     <label for="compte"><small>raison sociale</small></label>
     <%= form.text_field :raison_sociale,class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>forme juridique</small></label>
+    <%= form.collection_select :forme_id, Forme.all, :id, :nom, {prompt:"Choisir"},class:"select-css form-control", required: :true %>
   </div>
 
   <div class="form-group col-lg-4 col-12">
@@ -64,22 +45,15 @@
     <%= form.text_field :secteur,class:"form-control", required: :true %>
   </div>
 
+    <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>nature d'activité</small></label>
+    <%= form.text_field :nature,class:"form-control", required: :true %>
+  </div>
+
   <div class="form-group col-lg-4 col-12">
     <label for="compte"><small>fiche circuit</small></label>
     <%= form.file_field :fiche,class:"form-control", required: :true %>
   </div>
-
-  <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>rccm</small></label>
-    <%= form.file_field :rccm,class:"form-control", required: :true %>
-  </div>
-
-  <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>nif</small></label>
-    <%= form.file_field :nif,class:"form-control", required: :true %>
-  </div>
-
-
 
     <div class="col-12">
   </div>
@@ -89,17 +63,80 @@
   </div>
 
     <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>arrondissement</small></label>
-    <%= form.collection_select :arrondissement_id, Arrondissement.all, :id, :nom, {prompt:"Choisir"},class:"select-css form-control", required: :true%>
+    <label for="compte"><small>commune/ville/département</small></label>
+    <%= form.text_field :ville,class:"form-control", required: :true %>
   </div>
-    <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>montant du loyer/mois</small></label>
-    <%= form.text_field :loyer_mensuel,class:"form-control", required: :true %>
-  </div>
+  
   <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>montant du loyer/mois</small></label>
+    <label for="compte"><small>quartier/village</small></label>
     <%= form.text_field :quartier,class:"form-control", required: :true %>
   </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>date de création juridique</small></label>
+    <%= form.text_field :quartier,class:"form-control", required: :true %>
+  </div>
+
+    <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>nif(optionnel)</small></label>
+    <%= form.text_field :nif,class:"form-control" %>
+  </div>
+    <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>rccm(optionnel)</small></label>
+    <%= form.text_field :rccm,class:"form-control" %>
+  </div>
+
+      <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>récépissé(optionnel)</small></label>
+    <%= form.text_field :recepisse,class:"form-control" %>
+  </div>
+
+      <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>nombre d'employés(optionnel)</small></label>
+    <%= form.text_field :rccm,class:"form-control" %>
+  </div>
+
+      <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>pertes probables/mois(optionnel)</small></label>
+    <%= form.text_field :rccm,class:"form-control"%>
+  </div>
+
+      <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>statut siège social</small></label>
+    <%= form.collection_select :siege_id, Siege.all, :id, :nom, {prompt:"Choisir"},class:"select-css form-control", required: :true %>
+  </div>
+  
+    <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>montant du loyer/mois(optionnel)</small></label>
+    <%= form.text_field :loyer_mensuel,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>nom du bailleur(optionnel)</small></label>
+    <%= form.text_field :nom_proprietaire,class:"form-control" %>
+  </div>
+
+
+  <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>numéro de téléphone(optionnel)</small></label>
+    <%= form.telephone_field :telephones_proprietaire,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>adresse email(optionnel)</small></label>
+    <%= form.email_field :email_proprietaire,class:"form-control"%>
+  </div>
+  <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>statut du bailleur(optionnel)</small></label>
+    <%= form.collection_select :situation, Situation.all, :nom, :nom, {prompt:"Choisir"},class:"select-css form-control" %>
+  </div>
+    <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>situation actuelle</small></label>
+    <%= form.collection_select :actu_id, Actu.all, :id, :nom, {prompt:"Choisir"},class:"select-css form-control", required: :true %>
+  </div>
+
+
+
 
     <div class="form-group col-lg-4 col-12">
     <%= form.hidden_field :distribue_id,class:"form-control", value: '2'  %>

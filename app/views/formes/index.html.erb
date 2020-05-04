@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Formes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Slug</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @formes.each do |forme| %>
+      <tr>
+        <td><%= forme.nom %></td>
+        <td><%= forme.slug %></td>
+        <td><%= link_to 'Show', forme %></td>
+        <td><%= link_to 'Edit', edit_forme_path(forme) %></td>
+        <td><%= link_to 'Destroy', forme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Forme', new_forme_path %>

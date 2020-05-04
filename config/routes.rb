@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :sieges
+  resources :formes
   resources :banquealimentaires
   resources :comptes
   resources :actualites

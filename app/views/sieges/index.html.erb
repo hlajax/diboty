@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sieges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Slug</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sieges.each do |siege| %>
+      <tr>
+        <td><%= siege.nom %></td>
+        <td><%= siege.slug %></td>
+        <td><%= link_to 'Show', siege %></td>
+        <td><%= link_to 'Edit', edit_siege_path(siege) %></td>
+        <td><%= link_to 'Destroy', siege, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Siege', new_siege_path %>

@@ -89,7 +89,15 @@
   </div>
   <div class="form-group col-lg-6 col-12">
     <label for="compte"><small>numéro de la pièce</small></label>
-    <%= form.file_field :numero_piece,class:"form-control", required: :true %>
+    <%= form.text_field :numero_piece,class:"form-control", required: :true %>
+  </div>
+    <div class="form-group col-lg-6 col-12">
+    <label for="compte"><small>télécharger la pièce du bailleur</small></label>
+    <%= form.file_field :pieceb,class:"form-control", required: :true %>
+  </div>
+    <div class="form-group col-lg-6 col-12">
+    <label for="compte"><small>télécharger la pièce du locataire</small></label>
+    <%= form.file_field :piecec,class:"form-control", required: :true %>
   </div>
   <div class="form-group col-lg-6 col-12">
     <label for="compte"><small>numéro de téléphone</small></label>

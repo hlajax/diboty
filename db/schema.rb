@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_03_144619) do
+ActiveRecord::Schema.define(version: 2020_05_04_061419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -175,6 +175,14 @@ ActiveRecord::Schema.define(version: 2020_05_03_144619) do
     t.integer "chef_id"
   end
 
+  create_table "formes", force: :cascade do |t|
+    t.string "nom"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_formes_on_slug", unique: true
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -267,6 +275,15 @@ ActiveRecord::Schema.define(version: 2020_05_03_144619) do
     t.integer "actu_id"
     t.integer "distribue_id"
     t.integer "compte_id"
+    t.string "nature"
+    t.string "ville"
+    t.integer "forme_id"
+    t.string "datec"
+    t.string "recepisse"
+    t.string "nombre"
+    t.string "perte"
+    t.integer "siege_id"
+    t.string "situation"
   end
 
   create_table "loyers", force: :cascade do |t|
@@ -310,6 +327,8 @@ ActiveRecord::Schema.define(version: 2020_05_03_144619) do
     t.integer "distribue_id"
     t.integer "actu_id"
     t.integer "compte_id"
+    t.string "pieceb"
+    t.string "piecec"
   end
 
   create_table "natures", force: :cascade do |t|
@@ -355,6 +374,14 @@ ActiveRecord::Schema.define(version: 2020_05_03_144619) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_sexes_on_slug", unique: true
+  end
+
+  create_table "sieges", force: :cascade do |t|
+    t.string "nom"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_sieges_on_slug", unique: true
   end
 
   create_table "signalements", force: :cascade do |t|
