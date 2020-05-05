@@ -1,6 +1,7 @@
 class Loyer < ApplicationRecord
 	mount_uploader :pieceb, FichierUploader
 	mount_uploader :piecec, FichierUploader
+	mount_uploader :photo, FichierUploader
 	belongs_to :province
 	belongs_to :arrondissement
 	belongs_to :type
