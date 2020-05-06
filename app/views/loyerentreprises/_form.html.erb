@@ -24,6 +24,7 @@
     </div>
 <div class="col-12">
     <h5>Informations</h5>
+    <p><i><small>Partie réservée aux propriétaires d'une activité commerciale, responsable d'ONGs et d'associations.</small></i></p>
 </div>
 <div class="form-group col-lg-4 col-12">
     <label for="compte"><small>Sélectionner un compte</small></label>
@@ -51,8 +52,23 @@
   </div>
 
   <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>fiche circuit</small></label>
+    <label for="compte"><small>fiche circuit ou récépissé<br/>
+    (si vous n'avez pas de fiche circuit)</small></label>
     <%= form.file_field :fiche,class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>Numéro récépissé</small></label>
+    <%= form.text_field :recepisse,class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>Numéro nif</small></label>
+    <%= form.text_field :nif,class:"form-control" %>
+  </div>
+    <div class="form-group col-lg-4 col-12">
+    <label for="compte"><small>Numéro rccm</small></label>
+    <%= form.text_field :rccm,class:"form-control" %>
   </div>
 
     <div class="col-12">
@@ -75,20 +91,6 @@
   <div class="form-group col-lg-4 col-12">
     <label for="compte"><small>date de création juridique</small></label>
     <%= form.text_field :quartier,class:"form-control", required: :true %>
-  </div>
-
-    <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>nif</small></label>
-    <%= form.text_field :nif,class:"form-control" %>
-  </div>
-    <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>rccm</small></label>
-    <%= form.text_field :rccm,class:"form-control" %>
-  </div>
-
-      <div class="form-group col-lg-4 col-12">
-    <label for="compte"><small>récépissé</small></label>
-    <%= form.text_field :recepisse,class:"form-control" %>
   </div>
 
       <div class="form-group col-lg-4 col-12">
