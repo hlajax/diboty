@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <%=render "menus/main" %>
-    <div class="col-lg-6 offset-lg-1 col-12 p-4">
+    <div class="col-lg-8 offset-lg-2 col-12 p-4">
 <%= form_with(model: compte, local: true) do |form| %>
   <% if compte.errors.any? %>
     <div id="error_explanation">

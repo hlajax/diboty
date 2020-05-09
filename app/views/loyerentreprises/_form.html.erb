@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <%=render "menus/main" %>
-    <div class="col-lg-6 offset-lg-1 col-12 p-4">
+    <div class="col-lg-8 offset-lg-2 col-12 p-4">
 <%= form_with(model: loyerentreprise, local: true) do |form| %>
   <% if loyerentreprise.errors.any? %>
     <div id="error_explanation">
@@ -14,7 +14,8 @@
       </ul>
     </div>
   <% end %>
-  <div class="col-12">
+  <div class="row">
+      <div class="col-12">
       <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/"><small>Accueil</small></a></li>
@@ -143,8 +144,9 @@
     <div class="form-group col-lg-4 col-12">
     <%= form.hidden_field :distribue_id,class:"form-control", value: '2'  %>
   </div>
-  <div class="col-lg-4 col-12">
+  <div class="col-lg-12 col-12">
     <%= form.button 'Valider'.html_safe, type: :submit, class:"btn btn-kit-yellow btn-block", required: :true, :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Validation..."} %>
+  </div>
   </div>
 <% end %>
 </div>

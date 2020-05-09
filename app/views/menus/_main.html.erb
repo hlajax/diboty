@@ -1,16 +1,18 @@
-<div class="container bg-warning p-2">
-  <div class="row">
-    <div class="col-lg-6 col-3">
+<div class="container">
+  <div class="row bg-warning d-xl-none d-lg-none d-md-none d-sm-none d-block">
+    <div class="col-12">
+      <div class="row">
+            <div class="col-3 mb-2 mt-2">
       <a href="/"><img src="https://res.cloudinary.com/aseed/image/upload/v1587919681/logo_final_kits_odrfgb.png" class="logo"></a>
     </div>
-    <div class="col-lg-6 col-5 text-center">
+    <div class="col-5 text-center mb-2 mt-2">
       <% if current_chef.photo.blank? %>
       <a href="/"><img src="https://cdn.iconscout.com/icon/free/png-256/profile-417-1163876.png" class="logo"></a>
       <% else %>
       <%=image_tag current_chef.photo.url, class:"logo-true"%>
       <% end %>
     </div>
-        <div class="col-lg-6 col-4 text-center">
+        <div class="col-4 text-center mb-2 mt-2">
           <div class="dropdown dropleft">
   <a class="btn btn-kit-red dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <small><%=current_chef.nom%></small>
@@ -24,5 +26,37 @@
           
 
     </div>
+      </div>
+    </div>
   </div>
+    <div class="row d-xl-block d-lg-block d-md-block d-sm-block d-none">
+      <div class="col-lg-8 offset-lg-2  shadow mt-2 mb-2">
+        <div class="row">
+              <div class="col-lg-4 col-3">
+      <a href="/"><img src="https://res.cloudinary.com/aseed/image/upload/v1587919681/logo_final_kits_odrfgb.png" class="logo"></a>
+    </div>
+    <div class="col-lg-5 col-5 text-center">
+      <% if current_chef.photo.blank? %>
+      <a href="/"><img src="https://cdn.iconscout.com/icon/free/png-256/profile-417-1163876.png" class="logo"></a>
+      <% else %>
+      <%=image_tag current_chef.photo.url, class:"logo-true"%>
+      <% end %>
+    </div>
+        <div class="col-lg-3 col-4 text-center m-top-mini">
+          <div class="dropdown dropleft">
+  <a class="btn btn-kit-red dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <small><%=current_chef.nom%></small>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <%=link_to "Modifier mes infos", edit_chef_registration_path, class:"dropdown-item" %>
+    <%=link_to "Déconnexion", destroy_chef_session_path, class:"dropdown-item" %>
+  </div>
+</div>
+          
+
+    </div>
+        </div>
+      </div>
+    </div>
 </div>

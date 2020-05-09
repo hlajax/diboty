@@ -1,8 +1,8 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
     <%=render "menus/main" %>
   </div>
-  <div class="row">
+  <div class="row d-lg-none d-block">
     <div class="col-lg-5 col-10 offset-lg-0 offset-1 m-top d-lg-block d-none">
       <h4 class="text-center titre d-lg-none d-block">Bienvenue sur Kits</h4>
       <img class="img-fluid family" src="https://res.cloudinary.com/aseed/image/upload/v1587919682/famille_v7a56z.png" alt="">
@@ -29,14 +29,43 @@
     <div class="col-12 m-top text-center d-lg-none d-block">
       <%= link_to "Gabonais(e) en détresse", new_signalement_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
     </div>
-            <div class="col-6 m-top text-center d-lg-block d-none">
-      <%= link_to "Créez votre compte", new_chef_registration_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
+
+      </div>
     </div>
-    <div class="col-6 m-top text-center d-lg-block d-none">
-      <%= link_to "Accédez au compte", new_chef_session_path, class:"btn btn-kit-yellow  btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
+  </div>
+  <div class="row">
+    <div class="col-8 offset-2 d-lg-block d-none">
+        <div class="row">
+    <div class="col-lg-4 col-10 offset-lg-0 offset-1 m-top d-lg-block d-none">
+      <h4 class="text-center titre d-lg-none d-block">Bienvenue sur Kits</h4>
+      <img class="img-fluid family" src="https://res.cloudinary.com/aseed/image/upload/v1587919682/famille_v7a56z.png" alt="">
+    </div>
+    <div class="col-lg-8">
+      <h2 class="text-center titre d-lg-block d-none m-top-mini ">Bienvenue sur Kits</h2>
+      <div class="row">
+            <div class="col-6 m-top text-center">
+      <%= link_to "banque alimentaire", new_banquealimentaire_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
+    </div>
+    <div class="col-6 m-top text-center">
+      <%= link_to "prise en charge loyer", new_loyer_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."}%>
+    </div>
+    <div class="col-6 m-top text-center">
+      <%= link_to "appui aux PME", new_loyerentreprise_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."}%>
+    </div>
+    <div class="col-6 m-top text-center">
+      <%= link_to "don en nature", new_don_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
+    </div>
+    <div class="col-6 m-top text-center">
+      <%= link_to "don en numéraire", new_don_numeraire_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
+    </div>
+
+    <div class="col-6 m-top text-center">
+      <%= link_to "Gabonais en détresse", new_signalement_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
     </div>
 
       </div>
+    </div>
+  </div>
     </div>
   </div>
 </div>
