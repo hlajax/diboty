@@ -1,0 +1,2 @@
+class Cnam < ApplicationRecord
+end

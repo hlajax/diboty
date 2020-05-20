@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :cnams
+  resources :eligibles
+  resources :compteurs
+  resources :kitalimentaires
   resources :sieges
   resources :formes
   resources :banquealimentaires

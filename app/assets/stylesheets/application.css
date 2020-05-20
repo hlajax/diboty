@@ -64,6 +64,10 @@ body{
 .titre-small{
 	color:#ae211b;
 }
+.bg-kit-red{
+	background-color:#ae211b;
+	color: white;
+}
 .btn-kit-red{
 	background-color:#ae211b;
 	color: white;
@@ -72,6 +76,11 @@ body{
 	background-color:#fbc206;
 	border: 0px solid #ae211b;
 	color: #ae211b;
+}
+.btn-kit-yellow-top{
+	background-color:#ae211b;
+	border: 1px solid #ffffff;
+	color: #ffffff;
 }
 .card{
 	border: none

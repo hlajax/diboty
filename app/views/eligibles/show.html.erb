@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Libelle:</strong>
+  <%= @eligible.libelle %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @eligible.description %>
+</p>
+
+<%= link_to 'Edit', edit_eligible_path(@eligible) %> |
+<%= link_to 'Back', eligibles_path %>

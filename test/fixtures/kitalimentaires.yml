@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  province_id: 1
+  ville: MyString
+  arrondissement: MyString
+  quartier: MyString
+  compteur_id: 1
+  nom: MyString
+  sex_id: 1
+  age: MyString
+  profession: MyString
+  nombre: MyString
+  cnamgs_id: 1
+  contacts: 1
+  piece: MyString
+  photo: MyString
+  eligible_id: 1
+  chef_id: 1
+
+two:
+  province_id: 1
+  ville: MyString
+  arrondissement: MyString
+  quartier: MyString
+  compteur_id: 1
+  nom: MyString
+  sex_id: 1
+  age: MyString
+  profession: MyString
+  nombre: MyString
+  cnamgs_id: 1
+  contacts: 1
+  piece: MyString
+  photo: MyString
+  eligible_id: 1
+  chef_id: 1

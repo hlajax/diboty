@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Libelle:</strong>
+  <%= @cnam.libelle %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cnam.description %>
+</p>
+
+<%= link_to 'Edit', edit_cnam_path(@cnam) %> |
+<%= link_to 'Back', cnams_path %>

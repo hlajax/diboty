@@ -1,0 +1,2 @@
+class Compteur < ApplicationRecord
+end

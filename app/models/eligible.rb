@@ -1,0 +1,2 @@
+class Eligible < ApplicationRecord
+end

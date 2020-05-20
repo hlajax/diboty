@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <%=render "menus/main" %>
+    <%=render "menus/mobile" %>
+    <div class="col-lg-8 offset-lg-2 col-12 p-4">
+<%= form_with(model: kitalimentaire, local: true) do |form| %>
+  <% if kitalimentaire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kitalimentaire.errors.count, "error") %> prohibited this kitalimentaire from being saved:</h2>
+
+      <ul>
+      <% kitalimentaire.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+      <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>province</small></label>
+    <%= form.collection_select :province_id, Province.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Ville</small></label>
+    <%= form.text_field :ville,class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Arrondissement</small></label>
+    <%= form.text_field :arrondissement,class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Quartier</small></label>
+    <%= form.text_field :quartier,class:"form-control", required: :true %>
+  </div>
+
+      <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Compteur nature</small></label>
+    <%= form.collection_select :compteur_id, Compteur.all, :id, :libelle, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Nom</small></label>
+    <%= form.text_field :nom,class:"form-control", required: :true %>
+  </div>
+<div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Sexe</small></label>
+    <%= form.collection_select :sex_id, Sex.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Âge</small></label>
+    <%= form.text_field :age,class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Profession</small></label>
+    <%= form.text_field :profession,class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Nombre</small></label>
+    <%= form.text_field :nombre,class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>CNAMGS</small></label>
+    <%= form.collection_select :cnam_id, Cnam.all, :id, :libelle, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Contact</small></label>
+    <%= form.text_field :contacts,class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Pièce</small></label>
+    <%= form.file_field :piece,class:"form-control", required: :true %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Photo</small></label>
+    <%= form.file_field :photo,class:"form-control", required: :true %>
+  </div>
+
+      <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Eligibilité</small></label>
+    <%= form.collection_select :eligible_id, Eligible.all, :id, :libelle, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>
+  </div>
+
+    <div class="col-lg-4 col-12 mb-6">
+    <%= form.button 'Valider'.html_safe, type: :submit, class:"btn btn-kit-yellow btn-block", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Validation..."} %>
+  </div>
+<% end %>
+    </div>
+  </div>
+</div>

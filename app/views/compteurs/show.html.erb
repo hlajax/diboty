@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Libelle:</strong>
+  <%= @compteur.libelle %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @compteur.description %>
+</p>
+
+<%= link_to 'Edit', edit_compteur_path(@compteur) %> |
+<%= link_to 'Back', compteurs_path %>

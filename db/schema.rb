@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_064032) do
+ActiveRecord::Schema.define(version: 2020_05_19_230502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,6 +93,20 @@ ActiveRecord::Schema.define(version: 2020_05_05_064032) do
     t.index ["reset_password_token"], name: "index_chefs_on_reset_password_token", unique: true
   end
 
+  create_table "cnamgs", force: :cascade do |t|
+    t.string "libelle"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cnams", force: :cascade do |t|
+    t.string "libelle"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comptes", force: :cascade do |t|
     t.string "nom"
     t.datetime "created_at", null: false
@@ -116,6 +130,13 @@ ActiveRecord::Schema.define(version: 2020_05_05_064032) do
     t.integer "arrondissement_id"
     t.string "nombreepouse"
     t.string "photo"
+  end
+
+  create_table "compteurs", force: :cascade do |t|
+    t.string "libelle"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "constructions", force: :cascade do |t|
@@ -175,6 +196,13 @@ ActiveRecord::Schema.define(version: 2020_05_05_064032) do
     t.integer "chef_id"
   end
 
+  create_table "eligibles", force: :cascade do |t|
+    t.string "libelle"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "formes", force: :cascade do |t|
     t.string "nom"
     t.string "slug"
@@ -201,6 +229,28 @@ ActiveRecord::Schema.define(version: 2020_05_05_064032) do
     t.datetime "updated_at", null: false
     t.string "slug"
     t.index ["slug"], name: "index_habitats_on_slug", unique: true
+  end
+
+  create_table "kitalimentaires", force: :cascade do |t|
+    t.integer "province_id"
+    t.string "ville"
+    t.string "arrondissement"
+    t.string "quartier"
+    t.integer "compteur_id"
+    t.string "nom"
+    t.integer "sex_id"
+    t.string "age"
+    t.string "profession"
+    t.string "nombre"
+    t.integer "cnamgs_id"
+    t.integer "contacts"
+    t.string "piece"
+    t.string "photo"
+    t.integer "eligible_id"
+    t.integer "chef_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "cnam_id"
   end
 
   create_table "kits", force: :cascade do |t|

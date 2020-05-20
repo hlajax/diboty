@@ -11,10 +11,5 @@ class Chef < ApplicationRecord
          has_many :signalements
          has_many :loyerentreprises
          has_many :comptes
-         belongs_to :sex
-		 belongs_to :statut
-		 belongs_to :situation
-		 belongs_to :province
-		 belongs_to :arrondissement
      mount_uploader :photo, FichierUploader
 end

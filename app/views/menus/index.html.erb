@@ -1,34 +1,27 @@
 <div class="container">
   <div class="row">
     <%=render "menus/main" %>
+    <%=render "menus/mobile" %> 
   </div>
   <div class="row d-lg-none d-block">
-    <div class="col-lg-5 col-10 offset-lg-0 offset-1 m-top d-lg-block d-none">
-      <h4 class="text-center titre d-lg-none d-block">Bienvenue sur Kits</h4>
-      <img class="img-fluid family" src="https://res.cloudinary.com/aseed/image/upload/v1587919682/famille_v7a56z.png" alt="">
-    </div>
+    <div class="col-12 text-center" style="background: url('https://image.freepik.com/free-photo/portrait-two-lovely-african-sisters-hugging_171337-5405.jpg')no-repeat;background-size: cover;background-position: center;height: 30vh;">
+      </div>
     <div class="col-lg-6 col-12 offset-lg-1 offset-0 m-top">
       <h2 class="text-center titre d-lg-block d-none m-top-big ">Bienvenue sur Kits</h2>
       <div class="row">
             <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "banque alimentaire", new_banquealimentaire_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
+      <%= link_to "kit alimentaire", new_kitalimentaire_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
     </div>
+        
     <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "prise en charge loyer", new_loyer_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."}%>
-    </div>
-    <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "appui aux PME", new_loyerentreprise_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."}%>
-    </div>
-    <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "don en nature", new_don_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
-    </div>
-    <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "don en numéraire", new_don_numeraire_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
+      <%= link_to "don alimentaire", new_don_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
     </div>
 
     <div class="col-12 m-top text-center d-lg-none d-block">
-      <%= link_to "Gabonais(e) en détresse", new_signalement_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."} %>
+      <%= link_to "appui aux PME", new_loyerentreprise_path, class:"btn btn-kit-yellow btn-block text-maj", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Patientez..."}%>
     </div>
+
+
 
       </div>
     </div>
@@ -68,4 +61,118 @@
   </div>
     </div>
   </div>
+      <div class="row d-xl-block d-lg-block d-md-block d-sm-block d-none">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="row">
+                        <div class="col-12">
+            <p class="text-success" id="notice">
+                <small><%= notice %></small>
+            </p>
+            <h1 class="titre m-top">Famille <span class="text-maj"><%=current_chef.nom%></span></h1>
+            <hr>
+        </div>
+                    </div>
+                    <div class="row">
+                <div class="col-12 ">
+                    <h4 class="titre m-top-mini">
+                    Alertes sur vos comptes
+                    </h4>
+                </div>
+                <div class="col-3 mb-2">
+                    <a href="#" class="btn btn-kit-yellow">
+                Principal <span class="badge badge-danger">0</span>
+                    </a>
+                </div>
+                <div class="col-3 mb-2">
+                <a href="#" class="btn btn-kit-red">
+                Second <span class="badge badge-danger">0</span>
+                </a>
+                </div>
+                <div class="col-3 mb-2">
+            <a href="/menus" class="btn btn-kit-yellow">
+                Demande <i class="fas fa-plus"></i>
+            </a>
+
+        </div>
+        <div class="col-3 mb-2">
+            <a href="/comptes/new" class="btn btn-kit-yellow">
+                Nouveau compte <i class="fas fa-user-plus"></i>
+            </a>
+
+        </div>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row d-xl-block d-lg-block d-md-block d-sm-block d-none">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="row">
+        <div class="col-12">
+            <h3 class="titre m-top">Actualités COVID-19</h3>
+            <hr>
+        </div>
+        <hr>
+        <% @actualites.each do |actualite| %>
+        <div class="col-12">
+                
+                <div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-3">
+      <%= image_tag actualite.photo.url, class:"card-img" %>
+    </div>
+    <div class="col-9">
+      <div class="card-body">
+        <h5 class="card-title">
+            <%=link_to actualite do %>
+                <%= actualite.titre %>
+            <%end%>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+        </div>
+        <% end %>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="row d-xl-none d-lg-none d-md-none d-sm-none d-block">
+        <div class="col-12">
+            <h6 class="titre m-top">Actualités COVID-19</h6>
+        </div>
+        <hr>
+        <% @actualites.each do |actualite| %>
+        <div class="col-12">
+                
+                <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4 col-4">
+      <%= image_tag actualite.photo.url, class:"card-img" %>
+    </div>
+    <div class="col-md-8 col-8">
+      <div class="card-body">
+        <h5 class="card-title">
+            <%=link_to actualite do %>
+                <%= actualite.titre %>
+            <%end%>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+        </div>
+        <% end %>
+    </div>
 </div>

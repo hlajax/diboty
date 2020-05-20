@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kitalimentaires</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Province</th>
+      <th>Ville</th>
+      <th>Arrondissement</th>
+      <th>Quartier</th>
+      <th>Compteur</th>
+      <th>Nom</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Profession</th>
+      <th>Nombre</th>
+      <th>Cnamgs</th>
+      <th>Contacts</th>
+      <th>Piece</th>
+      <th>Photo</th>
+      <th>Eligible</th>
+      <th>Chef</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kitalimentaires.each do |kitalimentaire| %>
+      <tr>
+        <td><%= kitalimentaire.province_id %></td>
+        <td><%= kitalimentaire.ville %></td>
+        <td><%= kitalimentaire.arrondissement %></td>
+        <td><%= kitalimentaire.quartier %></td>
+        <td><%= kitalimentaire.compteur_id %></td>
+        <td><%= kitalimentaire.nom %></td>
+        <td><%= kitalimentaire.sex_id %></td>
+        <td><%= kitalimentaire.age %></td>
+        <td><%= kitalimentaire.profession %></td>
+        <td><%= kitalimentaire.nombre %></td>
+        <td><%= kitalimentaire.cnamgs_id %></td>
+        <td><%= kitalimentaire.contacts %></td>
+        <td><%= kitalimentaire.piece %></td>
+        <td><%= kitalimentaire.photo %></td>
+        <td><%= kitalimentaire.eligible_id %></td>
+        <td><%= kitalimentaire.chef_id %></td>
+        <td><%= link_to 'Show', kitalimentaire %></td>
+        <td><%= link_to 'Edit', edit_kitalimentaire_path(kitalimentaire) %></td>
+        <td><%= link_to 'Destroy', kitalimentaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kitalimentaire', new_kitalimentaire_path %>
