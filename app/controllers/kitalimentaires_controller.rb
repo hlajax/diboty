@@ -69,6 +69,6 @@ class KitalimentairesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def kitalimentaire_params
-      params.require(:kitalimentaire).permit(:province_id, :ville, :arrondissement, :quartier, :compteur_id, :nom, :sex_id, :age, :profession, :nombre, :cnam_id, :contacts, :piece, :photo, :eligible_id, :chef_id)
+      params.require(:kitalimentaire).permit(:province_id, :ville, :arrondissement, :quartier, :compteur_id, :nom, :numeroc, :beneficiaire, :sex_id, :age, :profession, :nombre, :cnam_id, :contacts, :piece, :photo, :eligible_id, :chef_id)
     end
 end

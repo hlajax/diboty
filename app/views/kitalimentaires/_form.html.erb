@@ -23,7 +23,7 @@
   </div>
 
   <div class="form-group col-lg-12 col-12">
-    <label for="compte"><small>Ville</small></label>
+    <label for="compte"><small>Ville/Département/District</small></label>
     <%= form.text_field :ville,class:"form-control", required: :true %>
   </div>
 
@@ -33,19 +33,30 @@
   </div>
 
   <div class="form-group col-lg-12 col-12">
-    <label for="compte"><small>Quartier</small></label>
+    <label for="compte"><small>Quartier/Village</small></label>
     <%= form.text_field :quartier,class:"form-control", required: :true %>
   </div>
 
       <div class="form-group col-lg-12 col-12">
-    <label for="compte"><small>Compteur nature</small></label>
+    <label for="compte"><small>Nature Compteur</small></label>
     <%= form.collection_select :compteur_id, Compteur.all, :id, :libelle, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>
   </div>
 
   <div class="form-group col-lg-12 col-12">
-    <label for="compte"><small>Nom</small></label>
+    <label for="compte"><small>Nom et Prenom du Proprétaire</small></label>
     <%= form.text_field :nom,class:"form-control", required: :true %>
   </div>
+
+    <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Numéro Compteur</small></label>
+    <%= form.text_field :numeroc,class:"form-control", required: :true %>
+  </div>
+
+    <div class="form-group col-lg-12 col-12">
+    <label for="compte"><small>Nom et Prenom du Bénéficiaire</small></label>
+    <%= form.text_field :beneficiaire,class:"form-control", required: :true %>
+  </div>
+
 <div class="form-group col-lg-12 col-12">
     <label for="compte"><small>Sexe</small></label>
     <%= form.collection_select :sex_id, Sex.all, :id, :nom, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>
@@ -57,12 +68,12 @@
   </div>
 
   <div class="form-group col-lg-12 col-12">
-    <label for="compte"><small>Profession</small></label>
+    <label for="compte"><small>Profession du Bénéficiaire</small></label>
     <%= form.text_field :profession,class:"form-control", required: :true %>
   </div>
 
   <div class="form-group col-lg-12 col-12">
-    <label for="compte"><small>Nombre</small></label>
+    <label for="compte"><small>Nombre de personnes du foyer</small></label>
     <%= form.text_field :nombre,class:"form-control", required: :true %>
   </div>
 
@@ -72,26 +83,26 @@
   </div>
 
   <div class="form-group col-lg-12 col-12">
-    <label for="compte"><small>Contact</small></label>
+    <label for="compte"><small>Contacts</small></label>
     <%= form.text_field :contacts,class:"form-control", required: :true %>
   </div>
 
   <div class="form-group col-lg-12 col-12">
-    <label for="compte"><small>Pièce</small></label>
+    <label for="compte"><small>Télécharger copie de pièce d'itentité</small></label>
     <%= form.file_field :piece,class:"form-control", required: :true %>
   </div>
 
   <div class="form-group col-lg-12 col-12">
-    <label for="compte"><small>Photo</small></label>
+    <label for="compte"><small>Télécharger photo du chef de famille</small></label>
     <%= form.file_field :photo,class:"form-control", required: :true %>
   </div>
 
       <div class="form-group col-lg-12 col-12">
-    <label for="compte"><small>Eligibilité</small></label>
+    <label for="compte"><small>Êtes-vous éligible ou pas au Kit Alimentaire?</small></label>
     <%= form.collection_select :eligible_id, Eligible.all, :id, :libelle, {prompt:"Sélectionner"},class:"select-css form-control", required: :true %>
   </div>
 
-    <div class="col-lg-4 col-12 mb-6">
+    <div class="col-lg-4 col-12 mb-6" style="margin-bottom:15%;">
     <%= form.button 'Valider'.html_safe, type: :submit, class:"btn btn-kit-yellow btn-block", :data => {:disable_with => "<i class='fa fa-spinner fa-spin'></i> Validation..."} %>
   </div>
 <% end %>
