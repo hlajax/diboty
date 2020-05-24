@@ -1,0 +1,27 @@
+<%= form_with(model: leskit, local: true) do |form| %>
+  <% if leskit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(leskit.errors.count, "error") %> prohibited this leskit from being saved:</h2>
+
+      <ul>
+      <% leskit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titre %>
+    <%= form.text_field :titre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prix %>
+    <%= form.text_field :prix %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

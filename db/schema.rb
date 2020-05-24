@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_20_083449) do
+ActiveRecord::Schema.define(version: 2020_05_22_091916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -194,6 +194,7 @@ ActiveRecord::Schema.define(version: 2020_05_20_083449) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "chef_id"
+    t.integer "leskit_id"
   end
 
   create_table "eligibles", force: :cascade do |t|
@@ -291,6 +292,13 @@ ActiveRecord::Schema.define(version: 2020_05_20_083449) do
     t.string "loyer"
     t.integer "chef_id"
     t.integer "distribue_id"
+  end
+
+  create_table "leskits", force: :cascade do |t|
+    t.string "titre"
+    t.string "prix"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "loyerentreprises", force: :cascade do |t|

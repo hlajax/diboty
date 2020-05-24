@@ -70,6 +70,6 @@ class DonsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def don_params
-      params.require(:don).permit(:nom, :nom_entreprise, :numero_de_telephone, :email, :adresse, :detail, :date, :chef_id)
+      params.require(:don).permit(:nom, :nom_entreprise, :numero_de_telephone, :email, :adresse, :detail, :date, :chef_id, :leskit_id)
     end
 end
